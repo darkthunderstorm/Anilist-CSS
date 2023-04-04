@@ -1,0 +1,757 @@
+/* Anilist.co Custom CSS
+Name:        Storm.css
+Author:      @ThunderBlaze
+
+https://i.ibb.co/PcBx42h/Profile-V1-01.png
+https://i.ibb.co/m8b08sZ/Profile-V1-02.png
+https://i.ibb.co/SXQJtwd/Background-NB.png
+
+    ============================
+This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
+
+    Code Credits [Created by]:
+    * anilist.co/user/Anzu
+    * anilist.co/user/Hyperixn
+    * anilist.co/user/Megumin (Kurisu)
+    * anilist.co/user/Sigma
+    ============================
+    Code Credits [Edited by]:
+    * anilist.co/user/ThunderBlaze
+    ============================
+
+    linear-gradient(rgb(68, 0, 127,0.5),rgb(0, 89, 127 ,0.5)), url(https://i.ibb.co/7YNkDC2/495521.jpg) center/100% fixed
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Nevis;
+    src: url(https://files.catbox.moe/a3a624.ttf);
+}
+
+/* Settings */
+:root, .site-theme-dark, .site-theme-contrast {
+  /* General Settings */
+  --Storm-br: 8px; /* Global Border Radius */
+  --Storm-pv: 30px; /* Vertical Content Padding */
+  --Storm-ph: 30px; /* Horizontal Content Padding */
+  --Storm-bt: 0.3;  /* Content Background Transparency*/
+  --Storm-nr: 20px; /* Navbar Border Radius */
+  --Storm-nl: 80%;  /* Navbar Length */
+  --Storm-sb: 6px;  /* Scrollbar Width */
+  --Storm-vo: 0.8;  /* Opacity For Various Elements */
+  --Storm-vs: 0.975;  /* Scale For Various Elements */
+  --Storm-vb: 2px;  /* Various Avatar Border Thickness */
+  --Storm-sr: 3px;  /* Social Page Border Thickness */
+  --Storm-fr: 20px; /* Footer Border Radius */
+  --Storm-fl: 80%;  /* Footer Length */
+  --Storm-bl: 3px;  /* Background 'Window' Blur Amount */
+  --Storm-rs: 1.025; /* Scaling For Load More Button And Activity Input */
+  --Storm-gs: 0, 178, 255;    /* Stats Wrap Gradient Start Color */
+  --Storm-ge: 68, 0, 127;    /* Stats Wrap Gradient End Color */
+  --Storm-vt: all 0.3s ease-in-out; /* Transition For Various Elements */
+  --Storm-li: url("https://i.ibb.co/Tb0t3d2/image.webp"); /* Anilist Logo Source */ 
+  --Storm-lb: 0px;     /* Anilist Logo Border Thickness */
+  --Storm-lr: 0px;     /* Anilist Logo Border Radius */
+  --Storm-ls: 1.1;     /* Anilist Logo Hover Scaling */
+  --Storm-bs: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px,
+               rgba(0, 0, 0, 0.07) 0px 4px 8px,
+               rgba(0, 0, 0, 0.07) 0px 8px 16px;
+  --Storm-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
+               rgba(0, 0, 0, 0.07) 0px 2px 4px;
+  
+  /* Avatar Settings */
+  --Storm-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
+  --Storm-ap: 50% 20%; /* Inner Avatar Position */
+  --Storm-ai: 150%;
+  --Storm-ab: 5px;   /* Avatar Border Thickness */
+  --Storm-ar: 255px;  /* Avatar Border Radius */
+  --Storm-at: all 0.3s ease-in-out; /* Avatar Hover Transition */
+  --Storm-av: url("https://i.ibb.co/x6ZTkXw/PFP.png"); /* Avatar Picture Link */
+  --Storm-ah: 1.1; /* Avatar Hover Scale */
+  
+  /* Quick Maths - !DON'T TOUCH! */
+  --Storm-brt: var(--Storm-br) var(--Storm-br) 0 0;
+  --Storm-brb: 0 0 var(--Storm-br) var(--Storm-br);
+  --Storm-bra: var(--Storm-br) var(--Storm-br) var(--Storm-br) var(--Storm-br);
+  --Storm-pdh: var(--Storm-pv) var(--Storm-ph);
+  --Storm-maw: calc(1520px - 2 * ( 100px - var(--Storm-ph)));
+  --Storm-abs: var(--Storm-ab) solid rgb(var(--color-foreground));
+  --Storm-nbr: 0 0 var(--Storm-nr) var(--Storm-nr);
+  --Storm-nbl: calc((100% - var(--Storm-nl)) / 2);
+  --Storm-fbr: var(--Storm-fr) var(--Storm-fr) 0 0;
+  --Storm-fbl: calc((100% - var(--Storm-fl)) / 2);
+  --Storm-bch: calc(330px - 75px);
+  --Storm-bcc: calc(var(--Storm-bch) / 2);
+  --Storm-bctc: calc(var(--Storm-bcc) - 36px / 2 );
+  --Storm-vab: var(--Storm-vb) solid rgb(var(--color-background));  
+  --Storm-sab: var(--Storm-sr) solid rgb(var(--color-background));
+  --Storm-lob: var(--Storm-lb) solid rgb(var(--color-blue));
+/*  --color-text-lighter: #cccccc;
+  --color-text: 200,200,200;*/
+}
+
+/* Light Theme
+:root {
+    --color-background:             217,219,227;
+    --color-foreground:             230,232,240;
+    --color-foreground-grey:        225,227,235;
+    --color-foreground-grey-dark:   217,219,227;
+    --color-text:                   91,87,84;
+    --color-text-light:             106,102,99;
+    --color-text-lighter:           121,117,114;
+    --color-text-bright:            226, 233, 229;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               191,180,164;
+    --color-green:                  169, 126, 73;
+
+}
+
+Dark Theme
+.site-theme-dark {
+    --color-background:             15, 23, 25;
+    --color-foreground:             28, 36, 38;
+    --color-foreground-grey:        20, 28, 30;
+    --color-foreground-grey-dark:   15, 23, 25;
+    --color-text:                   141, 138, 134; 
+    --color-text-light:             156, 153, 149;
+    --color-text-lighter:           161, 168, 164;
+    --color-text-bright:            176, 183, 179;
+    --color-blue:                   169, 126, 73;
+    --color-blue-dim:               91, 75, 64;
+    --color-green:                  169, 126, 73;
+} */
+
+/* Code */
+/* Body */
+body {
+    cursor: url(https://i.ibb.co/m0HsZ80/Cursor.png), auto;
+    background-image: url("https://i.ibb.co/7zvH2ZM/Background-NB-C-D.webp");
+    background-position: 50% 50%;
+    font-family: 'Montserrat', sans-serif;
+/*    background-size: 100%;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Header */
+#nav {
+  cursor: url(https://i.ibb.co/m0HsZ80/Cursor.png), auto;
+  background: rgba(var(--color-foreground),0.8) !important;
+  color: rgb(var(--color-text-light)) !important;
+  border-radius: var(--Storm-nbr);
+  left: var(--Storm-nbl);
+  width: var(--Storm-nl);
+  justify-content: center;
+  max-width: var(--Storm-maw);;
+  box-shadow: var(--Storm-bs);
+}
+.hide, .nav.nav-unscoped {
+  top: -65px !important;
+}
+.nav.nav-unscoped.transparent, .nav:hover {
+  top: 0px !important;
+}
+.links > .link:hover {
+  color: #00b2ff;
+}
+#app > .progress {
+    background-color: rgb(var(--color-blue));
+}
+.logo > img {
+    content: var(--Storm-li);
+    border-radius: var(--Storm-lr);
+    border: var(--Storm-lob);
+    transition: var(--Storm-vt);
+}
+.logo > img:hover {
+    transform: scale(var(--Storm-ls));
+}
+
+/* Banner */
+.banner {
+  visibility: hidden;
+}
+.banner > .container {
+  visibility: visible;
+  justify-content: center;
+}
+.container > .banner-content {
+  height: var(--Storm-bch);
+  width: 0;
+  align-items: center;
+  justify-content: center;
+}
+.banner-content > .avatar {
+  width: 0;
+  height: 0;
+  padding: var(--Storm-as);
+  background: var(--Storm-av);
+  background-size: var(--Storm-ai);
+  background-repeat: no-repeat;
+  background-position: var(--Storm-ap);
+  border-radius: var(--Storm-ar);
+  border: var(--Storm-abs);
+/*  box-shadow: var(--Storm-bs);*/
+  transition: var(--Storm-at);
+  z-index: 100;
+}
+.banner-content > .name-wrapper {
+  position: absolute;
+  transform: translateY(8vh);
+  z-index: 110;
+  opacity: 1;
+  pointer-events: none;
+}
+.banner-content > .name-wrapper > .name {
+  transition: var(--Storm-vt);
+}
+.banner-content > .follower-badge {
+  position: absolute;
+  bottom: var(--Storm-bctc);
+  margin: 0;
+  padding: 11.5px 10px;
+  transition: var(--Storm-at);
+}
+.banner-content > .follower-badge:hover {
+  background: rgba(var(--color-blue),1);
+}
+.banner-content:hover > .follower-badge {
+  transform: translateX(-170px);
+}
+.banner-content:hover > .name-wrapper > .name {
+  opacity: 0;
+}
+.banner-content > .actions {
+  position: absolute;
+  bottom: var(--Storm-bctc);
+  margin: 0;
+  padding: 0;
+  transition: var(--Storm-at);
+}
+.actions > .nav-btn {
+  width: 84.14px;
+  transition: var(--Storm-at);
+}
+.banner-content:hover > .avatar {
+  border-color: rgb(var(--color-blue));
+  transform: scale(var(--Storm-ah));
+}
+.banner-content:hover > .actions {
+  transform: translateX(183px);
+}
+
+
+/* Container */
+.header-wrap > .nav-wrap {
+  max-width: var(--Storm-maw);
+  background: rgba(var(--color-foreground-grey-dark),0.5);
+  width: 80%;
+  border-width: 2px 2px 0px 2px;
+  border-style: solid;
+  border-color: #FFFFFF89;
+  margin: 0 auto;
+  padding: 0px;
+  border-radius: 20px 20px 0px 0px;
+  color: rgb(255,255,255);
+/*  backdrop-filter: blur(var(--Storm-bl));*/
+/*  box-shadow: var(--Storm-ns);*/
+  position: relative;
+}
+
+.nav > .link {
+  position: relative;
+}
+.nav > .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: 0;
+  background: rgb(var(--color-blue));
+  transition: all 0.2s ease-in-out;
+}
+.nav > .router-link-active::after {
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+.nav > .link:hover::after {
+  left: 0;
+  width: 100%;
+  background: #FFF;
+}
+.content.container {
+  background: rgba(var(--color-foreground-grey-dark),var(--Storm-bt));
+  width: 80%;
+  max-width: var(--Storm-maw);
+  padding: var(--Storm-pdh);
+  border-width: 0px 2px 2px 2px;
+  border-style: solid;
+  border-color: border-color: #FFFFFF89;
+  border-radius: var(--Storm-brb);
+/*  box-shadow: var(--Storm-bs);*/
+/*  backdrop-filter: blur(var(--Storm-bl));*/
+}
+
+/* Content - Overview */
+.content > .overview {
+  margin-top: 0;
+}
+.stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .scroller > .load-more, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input {
+  border-radius: var(--Storm-bra) !important;
+/*  box-shadow: var(--Storm-bs);*/
+  transition: var(--Storm-vt);
+}
+.history-day:hover {
+  transform: scale(1.2);
+}
+.list-stats:nth-child(1), .list-stats:nth-child(2) {
+  height: calc(121px - 45px);
+  margin-bottom: 15px;
+}
+.list-stats:nth-child(1):hover, .list-stats:nth-child(2):hover {
+  height: 121px;
+  transform: scale(var(--Storm-vs));
+}
+.progress > .bar {
+    background: linear-gradient(270deg,rgb(var(--Storm-gs)),rgb(var(--Storm-ge))) !important;
+}
+.genre > .name {
+  transform: scale(1);
+}
+.genre > .name, .favourite {
+  transition: var(--Storm-vt);
+}
+.percentage {
+  opacity: var(--Storm-vo);
+}
+.percentage:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.overview .content-wrap {
+  transform: scale(var(--Storm-vs));
+}
+.overview .content-wrap:hover {
+  transform: scale(1);
+}
+.activity-entry > .wrap {
+  transition: var(--Storm-vt);
+  max-height: none /*70px*/;
+}
+.activity-entry:hover .wrap {
+  transform: scale(1); 
+  max-height: none /*663px*/; /*  663 560px max height, 28px margin, 70px header, 5px idk? kek */
+}
+.wrap > .text {
+  padding-top: 15px;
+}
+.text > .activity-markdown > .markdown {
+  max-height: none;
+}
+.header > .avatar, .list > .cover {
+  opacity: 1;
+  transition: var(--Storm-vt);
+}
+.wrap:hover .cover {
+  opacity: 1;
+}
+.header > .avatar, .users > .user {
+  opacity: var(--Storm-vo);
+  transition: var(--Storm-vt);
+  border-radius: var(--Storm-ar) !important;
+  border: var(--Storm-vab);
+}
+.wrap:hover .header > .avatar, .users > .user:hover, .reply:hover .header > .avatar {
+  opacity: 1;
+  border-color: rgb(var(--color-blue));
+}
+.header > .name {
+  transition: var(--Storm-vt);
+}
+.wrap:hover .header > .name {
+  opacity: 1;
+  font-weight: bold;
+}
+.activity-entry, .input, svg:not(:root).svg-inline--fa {
+  transition: var(--Storm-vt);
+}
+.list .title, .input .el-textarea__inner {
+  opacity: var(--Storm-vo);
+  transition: var(--Storm-vt);
+}
+.activity-manga_list:hover, .activity-anime_list:hover {
+  transform: scale(1);  
+}
+.activity-manga_list .title, .activity-anime_list .title {
+  opacity: 1;
+  font-weight: 500;
+}
+.input:hover {
+  transform: scale(var(--Storm-rs));
+}
+.input:hover .el-textarea__inner {
+  opacity: 1;
+}
+svg:not(:root).svg-inline--fa:hover {
+  transform: scale(1.2);
+}
+.scroller > .load-more {
+  margin-top: 0;
+}
+.scroller > .load-more:hover {
+  color: rgb(var(--color-blue));
+/*  box-shadow: var(--Storm-bs);*/
+  transform: scale(var(--Storm-rs));
+}
+.activity-replies > .reply {
+  border-radius: var(--Storm-br);
+}
+.reply:hover .header > .name {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* Content - Anime List / Manga List */
+.content > .medialist {
+  margin-top: 0;
+}
+.filter-group>span:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.medialist.table .entry:hover .title a {
+  font-weight: bold;
+}
+
+/* Content - Favorites */
+.favourites {
+  margin-top: 0 !important;
+}
+
+/* Content - Stats */
+.content > .stats {
+  margin-top: 0;
+}
+.filter-group a:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+
+/* Content - Social */
+.content > .user-social {
+  margin-top: 0;
+}
+.filter-group span:hover {
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
+}
+.follow-card {
+  opacity: var(--Storm-vo);
+  border-radius: var(--Storm-ar);
+  transition: var(--Storm-vt);
+}
+.follow-card > .avatar {
+  border: var(--Storm-sab);
+  border-radius: var(--Storm-ar) !important;
+  transition: var(--Storm-vt);
+}
+.follow-card:hover, .follow-card > .avatar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: rgb(var(--color-blue));
+}
+.follow-card > .name {
+      background: rgba(var(--color-shadow),.4);
+}
+
+/* Content - Reviews */
+.content .review-wrap {
+  margin-top: 0;
+}
+
+/* Footer */
+.wrap > .footer {
+  position: relative;
+  background: rgb(var(--color-foreground));
+  border-radius: var(--Storm-fbr);
+  left: var(--Storm-fbl);
+  width: var(--Storm-fl);
+/*  box-shadow: var(--Storm-bs);*/
+}
+.footer > .container {
+    justify-content: space-between;
+}
+.theme-selector > .dark {
+  background: #000;
+}
+.theme-selector > h2 {
+  color: rgb(var(--color-blue));
+}
+a, a:visited {
+    color: rgb(var(--color-text));
+}
+
+/* Sorry Hoh */
+.hohColourPicker, .theme-selector > .contrast, .hohDismiss {
+  display: none;
+}
+.footer .links {
+    margin-left: 0;
+    transform: translate(0px,0px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: var(--Storm-sb);
+height: var(--Storm-sb);
+}
+::-webkit-scrollbar-thumb {
+background: rgba(var(--color-text-light),.5);
+border-radius: var(--Storm-br);
+}
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+background: #00B2FF
+}
+body::-webkit-scrollbar-track {
+background: rgb(var(--color-background));
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dropdown Integration */
+:root, .site-theme-dark, .site-theme-contrast {
+    --color-background-100: var(--color-foreground);
+    --color-background-200: var(--color-background);
+    --color-gray-100: var(--color-foreground);
+    --color-gray-600: var(--color-text-light);
+    --color-gray-700: var(--color-text-light);
+    --color-gray-800: var(--color-blue);
+    --color-gray-900: var(--color-blue);
+}
+
+
+/*Custom Things*/
+.overview .favourites > .favourites-wrap > a {
+  transform: scale(0.93);
+  transistion: all 0.2s ease-in-out;
+  opacity: 0.85;
+  border: 1px solid #FFF;
+}
+.overview .favourites > .favourites-wrap > a:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+.header-wrap .nav-wrap .nav .link:nth-child(7),
+.header-wrap .nav-wrap .nav .link:nth-child(8) {
+  width: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+.input[data-v-c574a71c] {
+  margin-bottom: 16px;
+}
+.activity-entry[data-v-04d66030] {
+  margin-bottom: 16px;
+}
+.nav .router-link-active[data-v-1cc2919e] {
+  color: #FFF;
+}
+.nav .link[data-v-1cc2919e]:hover {
+  color: #FFF;
+}
+.nav .link[data-v-1cc2919e] {
+  color: 0;
+}
+.activity-feed-wrap, .stats-wrap {
+    padding-left: 2%;
+    max-width: 100%
+}
+
+.medialist > .lists {
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+.medialist > .lists > .actions {
+   transform: translate(-50px, 25px);
+}
+
+.favourites > .section-header {
+  padding-left: 12px;
+  align-items: center;
+}
+.about .content-wrap[data-v-5c30286e] { /* About */
+  height: 100%;
+  max-height: 100%;
+  transform: scale(1);
+}
+.content-wrap[data-v-b79eb0f0] { /* Activity History */
+  transform: scale(1);
+}
+.content-wrap[data-v-63cd3b41] { /* Genre Overview */
+  transform: scale(1);
+}
+.content-wrap[data-v-63cd3b41] > .genres> .genre > .name { /* To dark Genre names*/
+  opacity: 1;
+}
+.content-wrap[data-v-5c30286e] > .list-stats > .stats-wrap {
+  transform: scale(var(--Storm-vs));
+}
+.content-wrap[data-v-815ccddc]:hover {
+  transform: scale(0.975);
+}
+.stat .value[data-v-815ccddc] {
+  color: #00B2FF
+}
+
+
+
+
+
+
+.user .about > div.content-wrap, .activity-history, .favourite {
+    border-radius: 10px !important;
+}
+
+.activity-entry > .wrap, .reply {
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-color:  #8900ff;
+    border-radius: 10px !important;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(160, 0, 255) rgba(30, 35, 45, 0.2);
+    transition: transform 1s ease-in-out;
+}
+
+.activity-entry > .wrap:hover, .reply:hover {
+    border-color:  #00b2ff;
+}
+
+
+.text > .header {
+    display: flex;
+    align-items: center;
+}
+
+.activity-entry > .wrap > .text .avatar {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    border-color: #00b2ff;
+}
+
+.text .header > .name {
+    padding-top: 5px;
+    line-height: 15px;
+}
+ 
+.text > .header > .donator-badge {
+    top: -8px;
+    left: -8px;
+}
+
+.activity-message > .wrap > .time, .activity-text > .wrap > .time {
+    left: 77px;
+    top: 42px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.activity-entry .wrap > .text {
+    margin: 0px 5px 5px 5px;
+}
+
+.activity-message .wrap > .text > .activity-markdown, .activity-text .wrap > .text > .activity-markdown  {
+    border-radius: 0 !important;
+    border-bottom: 2px solid rgba(var(--color-text), 0.1);
+}
+
+.activity-message .wrap > .actions, .activity-text .wrap > .actions, .activity-text .wrap > .actions, .activity-text .wrap > .actions{
+    right: 0;
+    bottom: 0;
+    position: relative;
+    margin: -20px 0px 5px 25px;
+    font-size: 1.4rem;
+}
+
+.load-more {
+    font-family: 'Verdana', sans-serif;
+    font-size: 8rem;
+    color: rgba(var(--color-blue), 0.65);
+    margin:auto;
+    max-width: 200px;
+}
+
+.load-more:hover {
+    color: rgba(var(--color-blue), 1);
+}
+
+.desktop > .section-header, .section-header, .list-wrap > .section-name {
+    font-family: 'Nevis', sans-serif;
+    font-size: 3.3rem;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: rgba(var(--color-blue), 1);
+    text-transform: uppercase;
+}
+
+.section-header > .el-dropdown, .filters .filter-group > .active, .stats > .filters > .filter-wrap, .medialist > .lists {
+    color: #00b2ff;
+}
+
+.filters .filter-group > span:hover {
+    color: rgb(var(--color-blue));
+}
+
+
+
+
+/*
+  user-badges - version 2.1
+    by https://github.com/AnzuFTNW
+*/
+
+/* badges */
+.header > .name:after {
+  content: "Visitor";
+}
+/*.header > a[href="/user/ThunderBlaze/"].name:before {
+  content: "Mr.";
+}*/
+.header > a[href="/user/ThunderBlaze/"].name:after {
+  content: "Solitude";
+}
+
+/* settings */
+:root {
+  --badge-background: #00b2FF;
+  --badge-color: #FFF;
+  --badge-rounding: 3px;
+  --badge-font: Overpass;
+}
+
+/* code */
+.header > .name:after {
+  background: var(--badge-background);
+  border-radius: var(--badge-rounding);
+  color: var(--badge-color);
+  cursor: text;
+  font-family: var(--badge-font), -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin-left: 5px;
+  padding: 4px 7px;
+  position: relative;
+  top: -2px;
