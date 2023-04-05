@@ -2,6 +2,10 @@
 Name:        Storm.css
 Author:      @ThunderBlaze
 
+https://i.ibb.co/PcBx42h/Profile-V1-01.png
+https://i.ibb.co/m8b08sZ/Profile-V1-02.png
+https://i.ibb.co/SXQJtwd/Background-NB.png
+
     ============================
 This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
 
@@ -18,7 +22,7 @@ This CSS is a laboratory smash together from multiple CSS src's, changed and edi
     linear-gradient(rgb(68, 0, 127,0.5),rgb(0, 89, 127 ,0.5)), url(https://i.ibb.co/7YNkDC2/495521.jpg) center/100% fixed
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 @font-face {
     font-family: Nevis;
@@ -31,7 +35,7 @@ This CSS is a laboratory smash together from multiple CSS src's, changed and edi
   --Storm-br: 8px; /* Global Border Radius */
   --Storm-pv: 30px; /* Vertical Content Padding */
   --Storm-ph: 30px; /* Horizontal Content Padding */
-  --Storm-bt: 0.3;  /* Content Background Transparency*/
+  --Storm-bt: 0.4;  /* Content Background Transparency*/
   --Storm-nr: 20px; /* Navbar Border Radius */
   --Storm-nl: 80%;  /* Navbar Length */
   --Storm-sb: 6px;  /* Scrollbar Width */
@@ -123,9 +127,16 @@ Dark Theme
 /* Body */
 body {
     cursor: url(https://i.ibb.co/m0HsZ80/Cursor.png), auto;
-    font-family: 'Montserrat', sans-serif;
     background-image: url("https://i.ibb.co/7zvH2ZM/Background-NB-C-D.webp");
+/*    
+https://i.ibb.co/7zvH2ZM/Background-NB-C-D.webp
+https://i.ibb.co/Q8nkDvy/Background-NB-C-D.png
+https://files.catbox.moe/3ni51o.png
+*/
     background-position: 50% 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+/*    background-size: 100%;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -136,14 +147,31 @@ body {
   background: rgba(var(--color-foreground),0.8) !important;
   color: rgb(var(--color-text-light)) !important;
   border-radius: var(--Storm-nbr);
-  left: var(--Storm-nbl);
+  margin: 0 auto 0 auto;
+  position: relative;
+  left:0;
   width: var(--Storm-nl);
   justify-content: center;
-  max-width: var(--Storm-maw);;
+  max-width: var(--Storm-maw);
   box-shadow: var(--Storm-bs);
 }
+
+/*#nav {
+  cursor: url(https://i.ibb.co/m0HsZ80/Cursor.png), auto;
+  background: rgba(var(--color-foreground),0.8) !important;
+  color: rgb(var(--color-text-light)) !important;
+  border-radius: var(--Storm-nbr);
+  margin: 0 auto;
+  position: relative;
+  left:0;
+  width: var(--Storm-nl);
+  justify-content: center;
+  display: flex;
+  max-width: var(--Storm-maw);;
+  box-shadow: var(--Storm-bs);
+}*/
 .hide, .nav.nav-unscoped {
-  top: -65px !important;
+  top: -67px !important;
 }
 .nav.nav-unscoped.transparent, .nav:hover {
   top: 0px !important;
@@ -192,7 +220,7 @@ body {
   transition: var(--Storm-at);
   z-index: 100;
 }
-.banner-content > .name-wrapper {
+/*.banner-content > .name-wrapper {
   position: absolute;
   transform: translateY(8vh);
   z-index: 110;
@@ -235,17 +263,59 @@ body {
 }
 .banner-content:hover > .actions {
   transform: translateX(183px);
+}*/
+.banner-content > .name-wrapper {
+  position: absolute;
+  transform: translateY(8vh);
+  z-index: 110;
+  opacity: 1;
+  pointer-events: none;
 }
-
+.banner-content > .name-wrapper > .name {
+  transition: var(--Storm-vt);
+}
+.banner-content > .follower-badge {
+  position: absolute;
+  bottom: var(--Storm-bctc);
+  margin: 0;
+  padding: 11.5px 10px;
+  transition: var(--Storm-at);
+}
+.banner-content > .follower-badge:hover {
+  background: rgba(var(--color-blue),1);
+}
+.banner-content > .name-wrapper > .name {
+  transform : translate(255px,-65px);
+  font-size:4rem;
+  opacity:1;
+}
+.banner-content > .actions {
+  position: absolute;
+  bottom: var(--Storm-bctc);
+  margin: 0;
+  padding: 0;
+  transition: var(--Storm-at);
+}
+.actions > .nav-btn {
+  width: 84.14px;
+  transition: var(--Storm-at);
+}
+.banner-content:hover > .avatar {
+  border-color: rgb(var(--color-blue));
+  transform: scale(var(--Storm-ah));
+}
+.banner-content > .actions {
+  transform: translate(183px,30px);
+}
 
 /* Container */
 .header-wrap > .nav-wrap {
   max-width: var(--Storm-maw);
-  background: rgba(var(--color-foreground-grey-dark),0.5);
+  background: rgba(var(--color-foreground-grey-dark),0.7);
   width: 80%;
   border-width: 2px 2px 0px 2px;
   border-style: solid;
-  border-color: #FFFFFF89;
+  border-color: #FFFFFFa7;
   margin: 0 auto;
   padding: 0px;
   border-radius: 20px 20px 0px 0px;
@@ -554,14 +624,14 @@ background: rgb(var(--color-background));
 .activity-entry[data-v-04d66030] {
   margin-bottom: 16px;
 }
+.nav .link[data-v-1cc2919e] {
+  color: #5C728A;
+}
 .nav .router-link-active[data-v-1cc2919e] {
   color: #FFF;
 }
 .nav .link[data-v-1cc2919e]:hover {
   color: #FFF;
-}
-.nav .link[data-v-1cc2919e] {
-  color: 0;
 }
 .activity-feed-wrap, .stats-wrap {
     padding-left: 2%;
@@ -750,3 +820,7 @@ background: rgb(var(--color-background));
   padding: 4px 7px;
   position: relative;
   top: -2px;
+}
+.content.container {
+  border-color: #FFFFFFa6;
+}
