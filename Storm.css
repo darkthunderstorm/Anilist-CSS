@@ -49,7 +49,7 @@ This CSS is a laboratory smash together from multiple CSS src's, changed and edi
   --Storm-rs: 1.025; /* Scaling For Load More Button And Activity Input */
   --Storm-gs: 0, 178, 255;    /* Stats Wrap Gradient Start Color */
   --Storm-ge: 68, 0, 127;    /* Stats Wrap Gradient End Color */
-  --Storm-vt: all 0.3s ease-in-out; /* Transition For Various Elements */
+  --Storm-vt: all 0.2s ease-in-out; /* Transition For Various Elements */
   --Storm-li: url("https://i.ibb.co/Tb0t3d2/image.webp"); /* Anilist Logo Source */ 
   --Storm-lb: 0px;     /* Anilist Logo Border Thickness */
   --Storm-lr: 0px;     /* Anilist Logo Border Radius */
@@ -427,7 +427,7 @@ https://files.catbox.moe/3ni51o.png
 }
 .stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .scroller > .load-more, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input {
   border-radius: var(--Storm-bra) !important;
-/*  box-shadow: var(--Storm-bs);*/
+  box-shadow: var(--Storm-bs);
   transition: var(--Storm-vt);
 }
 .history-day:hover {
@@ -499,7 +499,7 @@ https://files.catbox.moe/3ni51o.png
 }
 .wrap:hover .header > .name {
   opacity: 1;
-  font-weight: bold;
+  font-weight: 600;
 }
 .activity-entry, .input, svg:not(:root).svg-inline--fa {
   transition: var(--Storm-vt);
@@ -513,7 +513,7 @@ https://files.catbox.moe/3ni51o.png
 }
 .activity-manga_list .title, .activity-anime_list .title {
   opacity: 1;
-  font-weight: 500;
+  font-weight: 600;
 }
 .input:hover {
   transform: scale(var(--Storm-rs));
@@ -537,7 +537,7 @@ svg:not(:root).svg-inline--fa:hover {
 }
 .reply:hover .header > .name {
   opacity: 1;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Content - Anime List / Manga List */
@@ -549,7 +549,7 @@ svg:not(:root).svg-inline--fa:hover {
   color: rgb(var(--color-blue));
 }
 .medialist.table .entry:hover .title a {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Content - Favorites */
@@ -665,14 +665,15 @@ background: rgb(var(--color-background));
 
 /*Custom Things*/
 .overview .favourites > .favourites-wrap > a {
-  transform: scale(0.93);
-  transistion: all 0.2s ease-in-out;
+  transistion: scale 0.1s ease-in-out;
+  transform: scale(0.87);
   opacity: 0.85;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
 }
 .overview .favourites > .favourites-wrap > a:hover {
-  transform: scale(1);
+  transform: scale(1.01);
   opacity: 1;
+  border-width:2px;
 }
 .header-wrap .nav-wrap .nav .link:nth-child(7),
 .header-wrap .nav-wrap .nav .link:nth-child(8) {
@@ -826,7 +827,7 @@ background: rgb(var(--color-background));
 .desktop > .section-header, .section-header, .list-wrap > .section-name {
     font-family: 'Nevis', sans-serif;
     font-size: 3.3rem;
-    font-weight: bold;
+    font-weight: 600;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     color: rgba(var(--color-blue), 1);
@@ -894,4 +895,12 @@ background: rgb(var(--color-background));
 .desktop:nth-of-type(8) {
     height: 0;
     visibility: hidden;
+}
+.favourites-wrap > .favourite {
+  box-shadow: var(--Storm-bs);
+  transition: all 0.1s ease-in-out;
+}
+.history-day.lv-0 {
+  transform: scale(2);
+  background: rgb(var(--color-foreground));
 }
