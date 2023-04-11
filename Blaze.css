@@ -2,21 +2,23 @@
 Name:        Blaze.css
 Author:      @ThunderBlaze
 
+https://i.ibb.co/PcBx42h/Profile-V1-01.png
+https://i.ibb.co/m8b08sZ/Profile-V1-02.png
+https://i.ibb.co/SXQJtwd/Background-NB.png
 
-==============================================================================================================
+    ============================
+This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
 
-    This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
-
-==============================================================================================================
-
-            Code Credits [Created by]:                               Code Credits [Edited by]:
-            * anilist.co/user/Anzu                                   * anilist.co/user/ThunderBlaze
-            * anilist.co/user/Hyperixn
-            * anilist.co/user/Megumin (Kurisu)
-            * anilist.co/user/Sigma
-            * anilist.co/user/Cakes
-
-==============================================================================================================
+    Code Credits [Created by]:
+    * anilist.co/user/Anzu
+    * anilist.co/user/Hyperixn
+    * anilist.co/user/Megumin (Kurisu)
+    * anilist.co/user/Sigma
+    * anilist.co/user/Cakes
+    ============================
+    Code Credits [Edited by]:
+    * anilist.co/user/ThunderBlaze
+    ============================
 */
 
 
@@ -31,6 +33,7 @@ Author:      @ThunderBlaze
     src: url(https://files.catbox.moe/a3a624.ttf);
 }
 
+/* Zoom In Animation */
 @keyframes zoomIn {
     0% {
         opacity: 0;
@@ -47,6 +50,14 @@ Author:      @ThunderBlaze
     animation-name: zoomIn
 }
 
+
+/* Change default color variables */
+:root, .site-theme-dark, .site-theme-contrast {
+    --color-foreground:     5, 18, 39;
+    --color-background:     3, 28, 58;
+    --color-background-300:     8,46,97;
+    --color-gray-300: 168,0,255;
+}
 
 
 
@@ -73,6 +84,7 @@ body {
   margin-left: max(-43vw,-690px);
   left: 50%;
   width: 86%;
+  background: #051227FF;
   justify-content: center;
   max-width: 1380px;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
@@ -81,6 +93,11 @@ body {
               rgba(0, 0, 0, 0.07) 0px 8px 16px;
 }
 
+
+/* Make Navbar transparent when at top */
+.nav.nav-unscoped.transparent {
+  background: #05122780 !important;
+}
 
 /* Color of Navbar links on hover */
 .links > .link:hover {
@@ -350,7 +367,30 @@ body .nav-btn[data-v-1cc2919e] {
 }
 
 
-/*  ----------------------------------------| OVERVIEW CONTAINER |------------------------------------------ */
+
+
+/*  ---------------------------------------------| FAVOURITES |-------------------------------------------- */
+
+.favourites-wrap.studios[data-v-ddf96a3c] a{
+    border: none;
+}
+
+
+/* Faviourites grid */
+.favourites > .favourites-wrap {
+  display: grid !important;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill,85px);
+  grid-template-rows: repeat(auto-fill,115px);
+  background: rgb(0,0,0,0) !important;
+  width: 85%;
+}
+
+
+
+
+/*  ----------------------------------------------| OVERVIEW |-------------------------------------------- */
 
 /* Customise Container of (Bio,Activity,...) in a fixed width range */
 @media (min-width: 1040px) and (max-width: 1540px) {
@@ -379,11 +419,10 @@ body .nav-btn[data-v-1cc2919e] {
 
 
   /* Faviourites grid */
-  .favourites > .favourites-wrap {
+  .overview .favourites > .favourites-wrap {
     display: grid !important;
     display: grid;
-    grid-gap: auto;
-    column-gap: auto !important;
+    padding: 0 !important;
     grid-template-columns: repeat(auto-fill,85px);
     grid-template-rows: repeat(auto-fill,115px);
     background: rgb(0,0,0,0) !important;
@@ -780,7 +819,7 @@ body::-webkit-scrollbar-track {
 
 
 
-/*  -------------------------------------------| SCROLLBAR |---------------------------------------------- */
+/*  ---------------------------------------------| EXTRAS |---------------------------------------------- */
 
 /* Dropdown Integration */
 :root, .site-theme-dark, .site-theme-contrast {
@@ -815,8 +854,85 @@ body::-webkit-scrollbar-track {
 
 
 
-/*  ---------------------------------------------| FAVOURITES |-------------------------------------------- */
 
-.favourites-wrap.studios[data-v-ddf96a3c] a{
-    border: none;
+/*  ------------------------------------------------| STATS |---------------------------------------------- */
+/* Change Color of Sidebar Links */
+.filter-group a:hover {
+  color: #00b2ff;
 }
+.filter-group a.router-link-active {
+  background: #051227 !important;
+  color: #00b2ff !important;
+}
+
+
+
+
+/*  ------------------------------------------------| SOCIAL |--------------------------------------------- */
+
+/* Change Color of sidebar links */
+.filter-group span:hover {
+  color: #00b2ff !important;
+}
+.filter-group span.active {
+  background: #051227 !important;
+  color: #00b2ff !important;
+}
+
+
+/* Customize Following/er PFP Background */
+.follow-card {
+  border-radius: 20px;
+  background-color: #051227 !important;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Customize Following/er PFP */
+.follow-card > .avatar {
+  border: 4px solid #051227;
+  border-radius: 20px !important;
+  transition: all 0.3s ease-in-out;
+}
+.follow-card:hover, .follow-card > .avatar:hover {
+  border-color: #8900ff;
+}
+
+
+
+
+/*  -----------------------------------------------| FOOTER |--------------------------------------------- */
+
+/* Customise Footer */
+.wrap > .footer {
+  position: relative;
+  background: #051227;
+  border-radius: 20px 20px 0px 0px;
+  left: 50%;
+  margin-left: max(-43vw,-690px);
+  width: 86%;
+}
+
+
+/* Customise Footer elements container*/
+.footer > .container {
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* Footer Links */
+.footer > .container > .links a{
+    color: #9FADBD !important;
+}
+
+/* Footer Dark Theme color*/
+.theme-selector > .dark {
+  background: #224;
+}
+
+/* Change color of "Site Theme" text */
+.theme-selector > h2 {
+  color: #00b2ff;
+}
+
