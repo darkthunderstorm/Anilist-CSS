@@ -833,6 +833,38 @@ body::-webkit-scrollbar-track {
 }
 
 
+/* Increase gap in names */
+.medialist.table .row {
+  padding: 4px 0px;
+}
+
+
+/* Bold Heading */
+.medialist.table .list-head {
+    font-weight: 600;
+}
+
+
+/* Colors and Font Size of Names and Titles */
+.medialist > .lists .list-head.row div{
+    color: #be72ff;
+    font-size: 1.6rem !important;
+}
+.medialist > .lists .entry div{
+    color: #fff;
+    font-size: 1.5rem !important;
+}
+.medialist > .lists .entry .progress {
+    color: #0f0;
+}
+.medialist > .lists .entry .score {
+    color: #00b2ff;
+}
+.medialist > .lists .entry .format {
+    color: #00b2ff;
+
+
+
 
 /*  ---------------------------------------------| FAVOURITES |-------------------------------------------- */
 
