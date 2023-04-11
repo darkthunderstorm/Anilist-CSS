@@ -369,26 +369,6 @@ body .nav-btn[data-v-1cc2919e] {
 
 
 
-/*  ---------------------------------------------| FAVOURITES |-------------------------------------------- */
-
-.favourites-wrap.studios[data-v-ddf96a3c] a{
-    border: none;
-}
-
-
-/* Faviourites grid */
-.favourites > .favourites-wrap {
-  display: grid !important;
-  display: grid;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fill,85px);
-  grid-template-rows: repeat(auto-fill,115px);
-  background: rgb(0,0,0,0) !important;
-  width: 85%;
-}
-
-
-
 
 /*  ----------------------------------------------| OVERVIEW |-------------------------------------------- */
 
@@ -854,8 +834,28 @@ body::-webkit-scrollbar-track {
 
 
 
+/*  ---------------------------------------------| FAVOURITES |-------------------------------------------- */
+
+.favourites-wrap.studios[data-v-ddf96a3c] a{
+    border: none;
+}
+
+
+/* Faviourites grid */
+.favourites > .favourites-wrap {
+  display: grid !important;
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fill,85px);
+  grid-template-rows: repeat(auto-fill,115px);
+  background: rgb(0,0,0,0) !important;
+}
+
+
+
 
 /*  ------------------------------------------------| STATS |---------------------------------------------- */
+
 /* Change Color of Sidebar Links */
 .filter-group a:hover {
   color: #00b2ff;
