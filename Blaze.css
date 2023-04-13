@@ -2,23 +2,19 @@
 Name:        Blaze.css
 Author:      @ThunderBlaze
 
-https://i.ibb.co/PcBx42h/Profile-V1-01.png
-https://i.ibb.co/m8b08sZ/Profile-V1-02.png
-https://i.ibb.co/SXQJtwd/Background-NB.png
 
-    ============================
-This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
+==============================================================================================================
 
-    Code Credits [Created by]:
-    * anilist.co/user/Anzu
-    * anilist.co/user/Hyperixn
-    * anilist.co/user/Megumin (Kurisu)
-    * anilist.co/user/Sigma
-    * anilist.co/user/Cakes
-    ============================
-    Code Credits [Edited by]:
-    * anilist.co/user/ThunderBlaze
-    ============================
+    This CSS is a laboratory smash together from multiple CSS src's, changed and edited by myself.
+
+    Code Credits [Created by]:                               Code Credits [Edited by]:
+        * anilist.co/user/AnzuFTNW                              * anilist.co/user/ThunderBlaze
+        * anilist.co/user/Hyperixn
+        * anilist.co/user/Megumin (Kurisu)
+        * anilist.co/user/Sigma
+        * anilist.co/user/Cakes
+    
+==============================================================================================================
 */
 
 
@@ -569,6 +565,7 @@ body .nav-btn[data-v-1cc2919e] {
 .favourites > .favourites-wrap > a:hover {
   transform: scale(1.01);
   opacity: 1;
+  border: 3px solid #8900FF;
 }
 
 
@@ -862,6 +859,7 @@ body::-webkit-scrollbar-track {
 }
 .medialist > .lists .entry .format {
     color: #00b2ff;
+}
 
 
 
