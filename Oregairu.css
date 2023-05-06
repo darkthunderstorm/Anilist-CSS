@@ -585,12 +585,12 @@ body .actions .nav-btn {
 
 /* For Custom Badges (By Anzu) */
 .header > .name:after {
-  content: "Visitor";
+  content: "Client";
 }
 
 
 .header > a[href="/user/ThunderBlaze/"].name:after {
-  content: "Solitude";
+  content: "Service Club";
 }
 
 
@@ -1027,7 +1027,7 @@ body::-webkit-scrollbar-track {
     transition: all 0.3s ease;
 }
 
-.activity-feed .activity-entry.activity-text .wrap {
+.activity-feed .activity-entry.activity-text .wrap, .activity-feed .activity-entry.activity-message .wrap {
     background: #101836;
     text-shadow: none;
 }
@@ -1075,7 +1075,7 @@ body::-webkit-scrollbar-track {
 
 
 .wrap .like-wrap.activity .users {
-    background: transparent
+    background: transparent;
 }
 
 
