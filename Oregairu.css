@@ -20,7 +20,8 @@ Author:      @ThunderBlaze
                                             and tried remaking it in my own style
     
 ==============================================================================================================
-*/
+
+
 
 
 
@@ -29,7 +30,7 @@ Author:      @ThunderBlaze
 
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 
 @font-face {
@@ -66,17 +67,10 @@ Author:      @ThunderBlaze
 
 
 
-/* Change Light Theme variables */
-:root {
-    --color-foreground:     5, 18, 39;
-    --color-background:     3, 28, 58;
-}
-
-
-/* Change Dark Theme variables */
-.site-theme-dark, .site-theme-contrast {
-    --color-foreground:     5, 18, 39;
-    --color-background:     3, 28, 58;
+/* Change Light and Dark Theme variables */
+:root, .site-theme-dark, .site-theme-contrast {
+    --color-foreground:     16, 24, 54;
+    --color-background:     16, 32, 90;
 }
 
 
@@ -96,7 +90,7 @@ body {
     background-size: 50%, 50%;
     background-repeat: repeat;
     color: #b5c5c5;
-    font-family: poppins,sans-serif;
+    font-family: "Poppins",sans-serif;
     font-weight: 300;
     line-height: 1.4;
     letter-spacing: 0.3px;
@@ -179,7 +173,7 @@ a, span {
     border-radius: 35px;
     width: 100%;
     cursor: text;
-    font-family: "Poppins";
+    font-family: "Poppins",sans-serif;
 }
 
 
@@ -207,7 +201,7 @@ a, span {
 
 .nav .wrap .links > a, .nav .wrap .links span > a {
     letter-spacing: 0.2px;
-    font-family: "Poppins";
+    font-family: "Poppins",sans-serif;
     font-weight: 600;
 }
 
@@ -491,7 +485,7 @@ body .actions .nav-btn {
 .stats-wrap .stat .label, .stats-wrap .stat .value {
     color: #FFFFFF;
     font-size: 1.3rem;
-    font-family: Poppins;
+    font-family: "Poppins",sans-serif;
     text-transform: uppercase;
     font-weight: 400;
 }
@@ -500,7 +494,7 @@ body .actions .nav-btn {
 /* To increase font size of no of Anime,Manga Stats */
 .stats-wrap .stat .value {
     font-size: 2.1rem;
-    font-family: Montserrat;
+    font-family: "Overpass",sans-serif;
     font-weight: 600;
 }
 
@@ -652,7 +646,7 @@ body .actions .nav-btn {
     padding-top: 5px;
     padding-left: 3px;
     color: #bc6ff1;
-    font-family: poppins;
+    font-family: "Poppins",sans-serif;
     font-weight: 700;
     line-height: 15px;
 }
@@ -818,7 +812,7 @@ body::-webkit-scrollbar-track {
     font-size: 1.1rem;
     padding: 1px 10px;
     font-weight: 800;
-    font-family: poppins;
+    font-family: "Poppins",sans-serif;
     border-radius: 50px;
 }
 
@@ -1051,7 +1045,7 @@ body::-webkit-scrollbar-track {
 .overview .section:nth-child(1) > div:nth-child(4) .section-header:after{
     content: "| Only Most Favourites";
     text-transform: initial;
-    font-family: poppins;
+    font-family: "Poppins",sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     position: relative;
@@ -1082,6 +1076,11 @@ body::-webkit-scrollbar-track {
 
 .wrap .like-wrap.activity .users {
     background: transparent
+}
+
+
+.markdown blockquote {
+    background: #102060;
 }
 
 
