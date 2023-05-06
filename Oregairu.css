@@ -20,8 +20,7 @@ Author:      @ThunderBlaze
                                             and tried remaking it in my own style
     
 ==============================================================================================================
-
-
+*/
 
 
 
@@ -826,7 +825,7 @@ body::-webkit-scrollbar-track {
 
 /* Change position of icons of 3 List display options */
 .medialist > .lists > .actions {
-   transform: translate(47px);
+   transform: translateY(47px);
 }
 
 
@@ -858,10 +857,10 @@ body::-webkit-scrollbar-track {
 
 .medialist > .lists .entry .progress, .medialist > .lists .entry .score, .medialist > .lists .entry .format {   
     color: #0eaeff; 
-}   
+}
 
 
-.medialist.table .entry:hover { 
+body .medialist.table .entry:hover { 
     background: #000920;    
 }
 
@@ -872,7 +871,18 @@ body::-webkit-scrollbar-track {
 }
 
 
-.filters .filter-group > .active{
+body .filters .filter-group > span{
+    color: #d2e1e1;
+    font-weight: 400;
+}
+
+
+body .filters .filter-group > span:hover{
+    color: #0eaeff;
+}
+
+
+body .filters .filter-group > span.active{
     color: #e84191;
 }
 
@@ -899,12 +909,17 @@ body::-webkit-scrollbar-track {
 
 
 /* Change Color of Sidebar Links */
-.filter-wrap .filter-group a:hover {
+body .filter-wrap .filter-group a {
+  color: #d2e1e1;
+}
+
+
+body .filter-wrap .filter-group a:hover {
   color: #0eaeff;
 }
 
 
-.filter-wrap .filter-group a.router-link-active {
+body .filter-wrap .filter-group a.router-link-active {
   background: #101836;
   color: #e84191;
 }
@@ -918,12 +933,18 @@ body::-webkit-scrollbar-track {
 
 
 /* Change Color of sidebar links */
-.user-social .filter-group span:hover {
+body .user-social .filter-group span {
+  color: #d2e1e1;
+  font-weight: 400;
+}
+
+
+body .user-social .filter-group span:hover {
   color: #0eaeff;
 }
 
 
-.user-social .filter-group span.active {
+body .user-social .filter-group span.active {
   background: #101836;
   color: #e85191;
 }
