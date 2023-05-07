@@ -677,20 +677,20 @@ body .actions .nav-btn {
 }
 
 
-.activity-anime_list .list.small {
-    font-weight: 300;
+.activity-anime_list .list.small, .activity-manga_list .list.small {
+    font-weight: 400;
 }
 
 
 /* Bold anime/manga name in activity */
 .activity-anime_list .list.small .title {
-    font-weight: 600;
+    font-weight: 700;
     color: #e84191;
 }
 
 
 .activity-manga_list .list.small .title {
-    font-weight: 600;
+    font-weight: 700;
     color: #bc6ff1 !important;
 }
 
