@@ -83,10 +83,9 @@ Author:      @ThunderBlaze
 /* Customise background */
 body {
     background: #102060;
-    background-image: url("https://i.imgur.com/OXHfo5Z.png"), url("https://i.imgur.com/KQj0gSE.png");
+    background-image: url("https://i.imgur.com/KQj0gSE.png");
     background-attachment: scroll;
     background-position: center top;
-    background-size: 50%, 50%;
     background-repeat: repeat;
     color: #b5c5c5;
     font-family: "Poppins",sans-serif;
@@ -1060,18 +1059,6 @@ body .user-social .filter-group span.active {
 .activity-entry .wrap:hover{
     color: #FFF;
     outline: 1px solid #FFFC;
-}
-
-
-.overview .section:nth-child(1) > div:nth-child(4) .section-header:after{
-    content: "| Only Most Favourites";
-    text-transform: initial;
-    font-family: "Poppins",sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    position: relative;
-    top:-8px;
-    left: 10px;
 }
 
 
