@@ -9,13 +9,14 @@
     <style type="text/css">
       body{
         background:#001021;
-        color: #04728f;
-        letter-spacing: 0.3px;
+        color: #B2D1DF;
+        letter-spacing: 0.5px;
         font-family: Montserrat;
         padding: 2.5vw;
+        padding-bottom: 0;
         margin: 0;
         line-height: 1.4;
-        word-spacing: 4px;
+        word-spacing: 2px;
         max-width: 1600px;
         margin: auto;
       }
@@ -37,6 +38,7 @@
         background: #102060;
         padding: 80px;
         border-radius: 20px;
+        border: 5px solid #00D2FF;
       }
       #heading center {
         font-size: 4rem;
@@ -55,13 +57,6 @@
         padding-bottom: 60px;
         display: flex;
         width: 100%;
-
-        &:nth-child(2n+1){
-          flex-direction: row-reverse;
-          & .imgcont {
-            flex-direction: row-reverse;
-          }
-        }
         @media (max-width:1024px) {
           flex-direction: column !important;
         }
@@ -72,7 +67,7 @@
           width: 90%;
         }
         border-radius: 20px;
-        border: 5px solid #D2E1FF;
+        border: 5px solid #00D2FF;
       }
       .content .imgcont {
         display: flex;
@@ -95,9 +90,9 @@
         }
       }
       .content div h2 {
-        margin-top: 0;
+        margin: 0;
         font-size: 2.4rem;
-        color: #FFF;
+        color: #00D2FF;
         text-transform: uppercase;
       }
       .content div p {
@@ -111,27 +106,32 @@
       .content div > a {
         padding: 10px 20px;
         font-size: 1.3rem;
-        color: #FFF;
+        color: #00D2FF;
         text-align: center;
         font-weight: 600;
         background: none;
-        border: 2px solid #FFF;
+        border: 2px solid #00D2FF;
         border-radius: 10px;
-        width: 160px;
+        width: 180px;
         transition: all 0.2s;
       }
       .content div > a:hover {
         color: #001021;
-        background: #FFF;
+        background: #00D2FF;
       }
       .content hr {
-        border-color: #486B90;
+        border-color: #B2D1DF;
         margin: 30px ;
         width: 90%;
         height: 90%;
       }
+      #upcoming {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
       #upcoming ul {
-        margin: auto;
         width: fit-content;
       }
     </style>
@@ -153,14 +153,14 @@
       </div>
     </div>
     <div class ="content">
-      <div class="imgcont">
-        <img src="https://gadgetgang.com/wp-content/uploads/2022/02/3.png" alt="Storm">
-        <hr>
-      </div>
       <div class="txtcont">
         <h2>Storm Theme</h2>
         <p>Yet to be written</p>
         <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/Storm.css">Storm.css &#8594;</a>
+      </div>
+      <div class="imgcont">
+        <hr>
+        <img src="https://gadgetgang.com/wp-content/uploads/2022/02/3.png" alt="Storm">
       </div>
     </div>
     <div class ="content">
@@ -175,14 +175,14 @@
       </div>
     </div>
     <div class ="content">
-      <div class="imgcont">
-        <img src="https://gadgetgang.com/wp-content/uploads/2021/10/Mond-Rainmeter-Skin.jpg" alt="AOT">
-        <hr>
-      </div>
       <div class="txtcont">
         <h2>Attack On Titan Theme</h2>
         <p>Yet to be written</p>
         <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/AOT.css">AOT.css &#8594;</a>
+      </div>
+      <div class="imgcont">
+        <hr>
+        <img src="https://gadgetgang.com/wp-content/uploads/2021/10/Mond-Rainmeter-Skin.jpg" alt="AOT">
       </div>
     </div>
     <hr>
