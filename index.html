@@ -1,11 +1,201 @@
 <html>
   <head>
     <title>
-      Anilist-CSS
+      Anilist CSS
     </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      body{
+        background:#001021;
+        color: #04728f;
+        letter-spacing: 0.3px;
+        font-family: Montserrat;
+        padding: 2.5vw;
+        margin: 0;
+        line-height: 1.4;
+        word-spacing: 4px;
+        max-width: 1600px;
+        margin: auto;
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00D2FF;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #001021;
+      }
+      a{
+        text-decoration: none;
+        color: #00D2FF;
+      }
+      #heading{
+        background: #102060;
+        padding: 80px;
+        border-radius: 20px;
+      }
+      #heading center {
+        font-size: 4rem;
+        font-weight: bolder;
+        padding-bottom: 10px;
+        color: #00D2FF;
+      }
+      #heading div {
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #D2E1FF;
+      }
+      .content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+        width: 100%;
+
+        &:nth-child(2n+1){
+          flex-direction: row-reverse;
+          & .imgcont {
+            flex-direction: row-reverse;
+          }
+        }
+        @media (max-width:1024px) {
+          flex-direction: column !important;
+        }
+      }
+      .content img {
+        width: calc(100% - 61px);
+        @media (max-width:1024px) {
+          width: 90%;
+        }
+        border-radius: 20px;
+        border: 5px solid #D2E1FF;
+      }
+      .content .imgcont {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 55%;
+        @media (max-width:1024px) {
+          flex-direction: column !important;
+          width: 100%;
+        }
+      }
+      .content .txtcont {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        @media (max-width:1024px) {
+          align-items: center;
+          width: 100%;
+        }
+      }
+      .content div h2 {
+        margin-top: 0;
+        font-size: 2.4rem;
+        color: #FFF;
+        text-transform: uppercase;
+      }
+      .content div p {
+        padding: 0;
+        color: #D2E1FF;
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin: auto;
+        width: 100%;
+      }
+      .content div > a {
+        padding: 10px 20px;
+        font-size: 1.3rem;
+        color: #FFF;
+        text-align: center;
+        font-weight: 600;
+        background: none;
+        border: 2px solid #FFF;
+        border-radius: 10px;
+        width: 160px;
+        transition: all 0.2s;
+      }
+      .content div > a:hover {
+        color: #001021;
+        background: #FFF;
+      }
+      .content hr {
+        border-color: #486B90;
+        margin: 30px ;
+        width: 90%;
+        height: 90%;
+      }
+      #upcoming ul {
+        margin: auto;
+        width: fit-content;
+      }
+    </style>
   </head>
   <body>
-    <h1>Anilist-CSS</h1>
-    <h3>A repository for CSS files of My Anilist Profiles</h3>
+    <div id="heading">
+      <center align="center">ANILIST CSS</center>
+      <div align="center">A repository for CSS files of ThunderBlaze's Anilist Profiles</div>
+    </div>
+    <div class ="content">
+      <div class="imgcont">
+        <img src="https://gadgetgang.com/wp-content/uploads/2021/10/Omnimo.jpg" alt="Blaze">
+        <hr>
+      </div>
+      <div class="txtcont">
+        <h2>Blaze Theme</h2>
+        <p>Yet to be written</p>
+        <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/Blaze.css">Blaze.css &#8594;</a>
+      </div>
+    </div>
+    <div class ="content">
+      <div class="imgcont">
+        <img src="https://gadgetgang.com/wp-content/uploads/2022/02/3.png" alt="Storm">
+        <hr>
+      </div>
+      <div class="txtcont">
+        <h2>Storm Theme</h2>
+        <p>Yet to be written</p>
+        <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/Storm.css">Storm.css &#8594;</a>
+      </div>
+    </div>
+    <div class ="content">
+      <div class="imgcont">
+        <img src="https://gadgetgang.com/wp-content/uploads/2021/10/Mond-Rainmeter-Skin.jpg" alt="Oregairu">
+        <hr>
+      </div>
+      <div class="txtcont">
+        <h2>Oregairu Theme</h2>
+        <p>Yet to be written</p>
+        <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/Oregairu.css">Oregairu.css &#8594;</a>
+      </div>
+    </div>
+    <div class ="content">
+      <div class="imgcont">
+        <img src="https://gadgetgang.com/wp-content/uploads/2021/10/Mond-Rainmeter-Skin.jpg" alt="AOT">
+        <hr>
+      </div>
+      <div class="txtcont">
+        <h2>Attack On Titan Theme</h2>
+        <p>Yet to be written</p>
+        <a target="blank" href="https://thunder-blaze.github.io/Anilist-CSS/AOT.css">AOT.css &#8594;</a>
+      </div>
+    </div>
+    <hr>
+    <div id="upcoming">
+      <h1 align="center">Upcoming</h1>
+      <ul>
+        <li>May be adding Comparison Slider for themes</li>
+        <li>Make this website better responsively</li>
+        <li>Adding more Themes</li>
+      </ul>
+    </div>
+    <div id="footer">
+      
+    </div>
   </body>
 </html>
