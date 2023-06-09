@@ -1,0 +1,573 @@
+/*
+Bungo Stray Dogs Theme
+
+Made By - Thunderblaze (https://anilist.co/user/ThunderBlaze)
+
+Special Thanks to Anzu as this theme is made using his lmyk theme as framework/foundation
+Anzu - https://anilist.co/user/Anzu
+*/
+
+/* Its novecento sans but BSD for Bungo Stray Dogs sounds more cool XD */
+@font-face {
+    font-family: BSD;
+    src: url('https://files.catbox.moe/hm1kkc.otf');
+}
+
+.banner-content > .avatar{
+    content: url('https://i.imgur.com/9AGMM9F.gif');
+}
+
+.banner .container {
+    padding-left: 0px;
+}
+
+.banner-content h1.name{
+    font-size: 3rem;
+}
+
+.banner-content .name-wrapper {
+    padding: 13px
+}
+
+
+/* stuff replacer */
+.banner {
+/*     background-image: url("https://imgur.com/Tq1OHS4.png") !important;  */
+/*     background-image: url('https://imgur.com/DffWyhV.png') !important; */
+    background-image: url('https://imgur.com/aBIfw4T.png') !important;
+    background-position: bottom center !important;
+    height: 100vh !important;
+}
+
+#app > .progress {
+    height: 0;
+    position: fixed;
+    display: flex;
+    pointer-events: none;
+    background: var(--bsd-cover);
+    overflow: hidden;
+    justify-content: center;
+    top: 0 !important;
+    display: flex;
+    border-radius: 0;
+    width: 100% !important;
+    transition: height 1s,opacity 0.5s ease-in-out 0.4s;
+}
+#app > .progress.fixed{
+    height: 100%;
+    transition: opacity 1ms ease-in-out 0ms;
+}
+
+#app > .progress::after {
+    content: "Best viewed in 1366x768 resolution";
+    display: inline-flex;
+    align-items: bottom;
+    justify-content: center;
+    margin-top: calc(50vh - 20px);
+    transform: translatey(-50%);
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    background: url("https://svgshare.com/i/tgj.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    filter: var(--bsd-filter);
+    position: absolute;
+    width: 80vw;
+    height: 14.3vw;
+    padding-top: 17vw;
+}
+
+.section-header{
+    font-weight: bold !important;
+    color: rgb(var(--color-blue))
+}
+
+/* color vars */
+:root, .site-theme-dark {
+    --color-blue: 222, 57, 23;
+    --color-background: 255, 255, 255;
+    --color-foreground: 234,234,234;
+    --color-text: 72,70,71;
+    --color-text-light: 72, 70, 71;
+    --color-text-lighter: 49, 45, 44;
+    --nbg: #FAFAFA;
+    --nlh: #212325;
+    --bg: #FFF;
+    --bgi: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76" height="50" viewBox="0 0 132 100" xml:space="preserve"><rect x="30" y="2" width="100" height="100" stroke="%23DE391780" stroke-width="3" stroke-dasharray="8" fill="none"/><rect x="40" y="12" width="100" height="100" stroke="%23D7D7D7" stroke-width="3" stroke-dasharray="8" fill="none"/></svg>');
+    --fgd: #eaeaea;
+    --fgl: #FFF;
+    --bsd-cover: #FFF;
+    --bsd-filter: invert(90%) drop-shadow(0 0 0.75rem #212325A0);
+    --sc: 0,230,255;
+    --color-background-100: 49,45,44;
+    --color-background-200: 33,35,37;
+    --color-gray-100: 49,45,44;
+    --color-gray-600: 193,192,192;
+    --color-gray-700: 193,192,192;
+    --color-gray-800: 255,255,255;
+    --color-gray-900: 0,230,255;
+}
+
+.site-theme-dark {
+    --color-blue: 0,230,255;
+    --color-background: 33, 35, 37;
+    --color-foreground: 49, 45, 44;
+    --color-text: 193, 192, 192;
+    --color-text-light: 193, 192, 192;
+    --color-text-lighter: 193, 192, 192;
+    --nbg: #212325;
+    --nlh: #FFF;
+    --bg: #010001;
+    --bgi: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="76" height="50" viewBox="0 0 132 100" xml:space="preserve"><rect x="30" y="2" width="100" height="100" stroke="%23999" stroke-width="3" stroke-dasharray="8" fill="none"/><rect x="40" y="12" width="100" height="100" stroke="%23373737" stroke-width="3" stroke-dasharray="8" fill="none"/></svg>');
+    --fgd:#312d2c;
+    --fgl:#212325;
+    --bsd-cover: #312d2c;
+    --bsd-filter: none;
+    --sc: 222, 57, 23;
+}
+/* #756861 */
+
+
+/* font */
+body {
+    font-family: 'BSD', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    background-color: var(--bg);
+    background-image: var(--bgi);
+    background-size: 6.5%;
+    background-position: top center;
+}
+#app .section-header {
+    font-family: 'BSD', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+
+/* site-layout */
+#nav.nav-unscoped {
+    position: fixed;
+    top: 0 !important;
+    height: 68px;
+    transition: all 0.3s !important;
+    background-color: #212325;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+/*     background-color: #042a37; */
+}
+
+#nav.nav-unscoped.transparent {
+    height: 85px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#nav > .wrap {
+    display: grid;
+    grid-template-columns: 180px auto 50px 80px;
+    max-width: unset;
+}
+
+#nav > .wrap .logo {
+    width: 100%;
+    transition: all 0.3 ease-in-out;
+    margin-left: 30px;
+}
+
+#nav > .wrap .logo::after {
+    content: 'ANILIST';
+    font-weight: 700;
+    font-family: "walter";
+    color: #c1c0c0;
+    font-size: 2.6rem;
+    margin-left: 10px;
+    padding: 0px;
+    letter-spacing: 5.4px;
+    background-image: url('data:image/svg+xml,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="706" height="104" xml:space="preserve"><rect x="2" y="2" width="100" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="102" y="2" width="114" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="216" y="2" width="95" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="311" y="2" width="100" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="411" y="2" width="96" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="507" y="2" width="95" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/><rect x="602" y="2" width="100" height="100" stroke="%23C1C0C0" stroke-width="4" fill="none"/></svg>');
+    background-size: auto 100%;
+    background-position: top left;
+}
+#nav > .wrap .logo:hover::after {
+    color: #FFF;
+}
+
+#nav.nav-unscoped.transparent > .wrap > .logo {
+    transform: scale(1.2);
+}
+
+#nav > .wrap > .links{
+    justify-content: right;
+}
+
+#nav > .wrap > .links > a, #nav > .wrap > .links > span > a {
+    color: #c1c0c0;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#nav > .wrap > .links > .link,
+.browse-wrap{
+  font-family: 'BSD', sans-serif;
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 10px 12px;
+    transition: all 0.3s ease-in-out;
+}
+.browse-wrap .dropdown{
+    position: absolute;
+    top: 43px;
+    left: 15px;
+    letter-spacing: 0.03em;
+}
+
+#nav > .wrap > .links > .link:hover, .browse-wrap:hover {
+    background: #312d2c;
+    color: #FFF;
+}
+#nav > .wrap > .links > span:hover > a{
+    color: #FFF;
+}
+#nav > .wrap > .links > .link,#nav > .wrap > .links > span{
+    position: relative;
+}
+#nav > .wrap > .links > .link::after, #nav > .wrap > .links > span::after {
+    position: absolute;
+    content: '';
+    width: 1px;
+/*     background-color: #de3917; */
+    background-color: rgb(var(--color-blue));
+    top: 50%;
+    left: 50%;
+    height: 0%;
+    z-index: 2;
+    transform-origin: center center;
+    transform: rotate(30deg);
+    transition: all 0.3s cubic-bezier(0.44, 0.07, 0.23, 1.11);
+    transition-delay: 300ms;
+}
+#nav > .wrap > .links > .link:hover::after, #nav > .wrap > .links > span:hover::after  {
+    top: 0;
+    height: 100%;
+}
+.user > .content.container > .overview {
+    grid-template-columns: none !important;
+}
+@media (min-width: 1540px) {
+    .container {
+        max-width: 1640px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+@media (min-width: 1040px) and (max-width: 1540px) {
+    .container {
+        max-width: 1540px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+.overview > div > .about > .content-wrap {
+    max-height: unset;
+}
+.hohDownload, .hohDismiss, .stats-wrap > .list-stats > .footer {
+    display: none;
+}
+
+.section:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.about  {
+    grid-column: span 2;
+}
+
+/* links */
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrap .nav-wrap{
+    background: var(--nbg);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+}
+
+.nav.container .link {
+    position: relative;
+    font-family: 'BSD', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #A1A0A0;
+    margin: 20px;
+    padding: 6px;
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+/*  transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); */
+    transition: all 0.3s ease-in-out;
+}
+.nav.container .link:hover {
+    color: var(--nlh) !important;
+}
+.nav.container .link::after,.footer .links a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--nlh);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .links a::after{
+    background: rgb(var(--color-blue));
+}
+
+.nav.container .link:hover::after,.footer .links a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.nav.container .link.router-link-active{
+    color: var(--nlh) !important;
+}
+.nav.container .link.router-link-active::after {
+    width: 100%;
+}
+
+.desktop:nth-of-type(6), .desktop:nth-of-type(7), .desktop:nth-of-type(8) {
+    display: none;
+}
+
+.activity-feed-wrap {
+    position: relative;
+    padding-top: 25px;
+}
+
+.activity-feed{
+    display: grid;
+    grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+    grid-gap: 10px;
+    column-gap: 40px;
+}
+
+.activity-entry .wrap, .activity-replies .reply{
+    background: var(--fgd);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out !important;
+}
+
+.activity-entry:hover .wrap {
+    background: var(--fgl);
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.7);
+}
+
+.activity-replies .reply{
+    padding: 14px;
+    padding-bottom: 4px;
+}
+
+.activity-feed .activity-entry .wrap .time:hover{
+    background: transparent;
+}
+
+.activity-entry .wrap .list.small .cover{
+    border-radius: 10px;
+}
+
+.activity-message, .activity-text{
+    grid-column: span 2;
+}
+
+
+.hohPinned {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.hohPinned::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 70%;
+    height: 1px;
+    background: #11111111;
+}
+
+::-webkit-scrollbar {
+    display: none; 
+}
+
+.wrap > .footer {
+    background-color: #212325;
+    color: #c1c0c0;
+    font-family: 'BSD', sans-serif;
+    font-weight: 500;
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+}
+
+.wrap > .footer .links a{
+    margin: 14px;
+    padding: 0 0 6px 0;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.wrap > .footer .links a:hover{
+    color: rgb(var(--color-blue));
+    transition: all 0.2s ease-in-out;
+}
+
+.wrap > .footer .links a:before{
+    content: none;
+}
+
+.theme-selector > h2 {
+    color: rgb(var(--color-blue));
+}
+
+.theme-selector > div:nth-child(4),.theme-selector > div:nth-child(6) {
+    display: none;
+}
+
+.overview .favourites > .favourites-wrap {
+    width:100%;
+    grid-gap: 20px;
+    column-gap: 20px !important;
+}
+
+@media (min-width: 1040px) and (max-width: 1540px) {
+    .overview .favourites > .favourites-wrap {
+        grid-template-columns: repeat(auto-fill,74px);
+        grid-template-rows: repeat(auto-fill,100px);
+        grid-gap: 20px;
+        position: relative;
+        column-gap: 15px !important;
+    }
+
+    .overview .favourites > .favourites-wrap a{
+        width: 74px;
+        height: 100px;
+    }
+    
+    .overview .favourites > .favourites-wrap.anime::after {
+        content: '';
+        position: absolute;
+        right: -21px;
+        width: 2px;
+        border-radius: 2px;
+        height: 100%;
+        background: rgb(var(--sc));
+    }
+}
+
+.stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .scroller .load-more {
+    border-radius: 15px !important;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+}
+
+.user-page-unscoped .markdown-editor, .el-textarea__inner, .favourites-wrap > .favourite {
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.3);
+    border-radius: 8px;
+}
+
+.section > .stats-wrap{
+    display: grid;
+    padding-left: 60px;
+    padding-right: 60px;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section > .stats-wrap .list-stats .stats-wrap{
+    padding: 30px 20px;
+}
+
+.favourites > .favourites-wrap {
+    overflow: visible;
+    transition: all 0.3s ease-in-out;
+}
+
+.favourites > .favourites-wrap a{
+    transition: all 0.3s ease-in-out;
+}
+
+.favourites-wrap > .favourite:hover, .scroller .load-more:hover{
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.8);
+    transform: translateY(-2px);
+}
+
+body .header-wrap .nav-wrap .nav.container .link:nth-child(7),
+body .header-wrap .nav-wrap .nav.container .link:nth-child(8) {
+    display: none;
+}
+
+body .overview .activity-feed-wrap .activity-feed .activity-anime_list .list.small .title {
+    font-weight: 700;
+}
+
+body .overview .activity-feed-wrap .activity-feed .activity-manga_list .list.small .title {
+    font-weight: 700;
+    color: rgb(var(--sc)) !important;
+}
+
+body .content.container > * {
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background: var(--fgl);
+    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.5);
+}
+
+body .content.container > .overview {
+    background: none;
+    padding: 0px;
+    box-shadow: none;
+}
+
+.follow-card, .follow-card .avatar {
+    border-radius: 30px;
+}
+
+/*  -------------------------------------------| CUSTOM BADGES |-------------------------------------------- */
+
+
+/* For Custom Badges (By Anzu) */
+
+/* Added after Visitor's name */
+.header > .name:after {
+    content: "Ability User";
+}
+
+
+/* Added after my name */
+.header > a[href="/user/ThunderBlaze/"].name:after {
+    content: "No Longer Human";
+}
+
+
+/* Customise Appearance of the Badge */
+.header > .name:after {
+    background: rgb(var(--color-text-lighter));
+    border-radius: 4px;
+    color: rgb(var(--color-foreground));
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-left: 2px;
+    top: -1px;
+    padding: 4px 8px 2px 8px;
+    position: relative;
+}
