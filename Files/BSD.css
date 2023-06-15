@@ -46,6 +46,7 @@ Anzu - https://anilist.co/user/Anzu
     display: flex;
     border-radius: 0;
     width: 100% !important;
+    transition: width 10ms;
     animation: welcome 3.5s forwards;
 }
 @keyframes welcome {
