@@ -1,4 +1,4 @@
-#Anilist CSS
+# Anilist CSS
 
 <hr>
 
