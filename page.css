@@ -493,4 +493,21 @@ a{
     font-size: 1rem;
     text-align: center !important;
   }
+  #popup {
+    padding: 25px;
+    padding-top: 50px;
+    width: calc(100% - 60px);
+    height: calc(100lvh - 85px);
+  }
+  #popup .title {
+    font-size: 2rem;
+  }
+  #popup .close {
+    background: var(--bg);
+  }
+  #popup .preview img {
+    margin-top: 50px;
+    outline: 2px solid var(--pc);
+    border-radius: 10px;
+  }
 }
