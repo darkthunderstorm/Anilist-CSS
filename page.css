@@ -3,14 +3,15 @@
 html{
   overflow-x: hidden !important;
 
-  --ac: #06BEE1;
-  --pc: #F21B3F;
-  --bg: #0F084B;
-  --fg: #A6CFD5;
-  --fg2: #C2E7D9;
-  --acl: #26408B;
-  --bgo: #040425BF;
-  --bgn: #040425; /*#031927;#011314;*/
+  --ac: #C3FF0E;
+  --pc: #C3FF0E;
+/*  --pc: #39FF1F;*/
+  --bg: #141217;
+  --fg: #8A8C96;
+  --fg2: #EBF4FF;
+  --acl: #19555B;
+  --bgo: #1412317F;
+  --bgn: #28242D; /*#031927;#011314;*/
 }
 body{
   background-color: var(--bg);
@@ -53,7 +54,7 @@ a{
   top: 0;
   left: 0;
   background: var(--bgn);
-  border-bottom: 1px solid #FFF2;
+/*  border-bottom: 1px solid #FFF2;*/
   color: #FFF;
   display: flex;
   z-index: 99999;
@@ -63,10 +64,12 @@ a{
   padding-left: 100px;
   padding-right: 100px;
   transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 #nav.transparent {
   height: 80px;
   background: transparent;
+  box-shadow: none;
 }
 #nav .logo {
   height: 42px;
@@ -122,7 +125,7 @@ a{
   transition: all 300ms ease;
 }
 #nav .nav-wrap .links {
-  color: #FFF;
+  color: var(--fg2);
   font-weight: 600;
   margin: 14px 30px;
   padding: 3px 0px;
@@ -138,7 +141,7 @@ a{
   z-index: -1;
   border-radius: 3px;
   transform: translate(-50%,-50%);
-  background: #FFF; /*var(--ac);*/
+  background: var(--ac); /*var(--ac);*/
   position: absolute;
   transition: all 300ms ease;
 }
@@ -148,7 +151,7 @@ a{
   width: 130%;
 }
 #nav .nav-wrap .links:hover {
-  color: var(--pc);
+  color: var(--bgn);
 }
 #heading{
   position: relative;
@@ -194,14 +197,14 @@ a{
   transform: translateX(100%) skewX(15deg);
 }
 #heading h2 {
-  font-family: "Poppins",sans-serif;
+  font-family: "cocogoose",sans-serif;
   font-size: 10rem;
   font-weight: bolder;
   padding: 10px;
   margin: 0;
-  color: var(--ac);
+  color: var(--ac);/*
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.03em var(--ac);
+  -webkit-text-stroke: 0.03em var(--ac);*/
   /*color: var(--ac);
   text-shadow: -1px -1px 0 var(--ac), 1px -1px 0 var(--ac), -1px 1px 0 var(--ac), 1px 1px 0 var(--ac);*/
 
@@ -274,6 +277,10 @@ a{
   font-weight: 300;
   margin: auto;
   width: 100%;
+  transition: all 0.3s ease;
+}
+.content:hover div p {
+  color: var(--fg2);
 }
 .content div > a {
   padding: 10px 20px;
@@ -287,7 +294,7 @@ a{
   transition: 0.3s all ease-in-out;
 }
 .content div > a:hover {
-  color: #FFF;
+  color: var(--bgn);
   background: var(--pc);
 }
 .content > :nth-child(2n){
