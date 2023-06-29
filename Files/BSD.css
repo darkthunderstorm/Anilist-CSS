@@ -582,8 +582,41 @@ Light Snow
 Discourse On Decadence
 The Matchless Poet
  */
+.header > a[href="/user/skkerekt/"].name:after {
+    content: "Flawless";
+}
 .header > a[href="/user/Kuragari/"].name:after {
-    content: "No Longer Human";
+    content: "Undefeated By the Rain";
+}
+.header > a[href="/user/PhillyThaNL/"].name:after {
+    content: "Upon The Tainted Sorrow";
+}
+.header > a[href="/user/NinosThighs/"].name:after {
+    content: "Rashoumon";
+}
+.header > a[href="/user/Ksyoz/"].name:after {
+    content: "The Great Fitzgerald";
+}
+.header > a[href="/user/Xerx105/"].name:after {
+    content: "Discourse On Decadence";
+}
+.header > a[href="/user/WaifuStalker/"].name:after {
+    content: "Vita Sexulis";
+}
+.header > a[href="/user/AsunaLover69/"].name:after {
+    content: "Thou Shalt Not Die";
+}
+.header > a[href="/user/Kazzuto/"].name:after {
+    content: "Beast Beneath The Moonlight";
+}
+.header > a[href="/user/suzlingss/"].name:after {
+    content: "Light Snow";
+}
+.header > a[href="/user/Serendipity/"].name:after {
+    content: "The Matchless Poet";
+}
+.header > a[href="/user/SuryaAnime/"].name:after {
+    content: "Demon Snow";
 }
 
 
