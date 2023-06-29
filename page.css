@@ -1,3 +1,9 @@
+/*#39FF1F
+#28242D
+#EBF4FF
+#00A6A6
+#BAFF29*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 html{
@@ -12,6 +18,7 @@ html{
   --acl: #19555B;
   --bgo: #1412317F;
   --bgn: #28242D; /*#031927;#011314;*/
+
 }
 body{
   background-color: var(--bg);
@@ -329,7 +336,7 @@ a{
 #upcoming {
   display: flex;
   flex-direction: row;
-  color: var(--ac);
+  color: var(--fg);
   align-items: center;
   justify-content: center;
   border-top: 3px solid rgba(255,255,255,.1);
