@@ -436,7 +436,7 @@ a{
     text-align: center;
     background: var(--bg);
     justify-content: center;
-    gap: 20px;
+    gap: 8px;
     width: 0;
     overflow: hidden;
   }
