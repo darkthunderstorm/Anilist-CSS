@@ -567,21 +567,10 @@ body .content.container > .overview {
 }
 
 
-/* Added after some of my friends
-Undefeated By The Rain
-The Great Fitzgerald
-Thou Shalt Not Die
-Demon Snow
-Vita Sexulis
-Flawless
-Beast Beneath The Moonlight
-Rashoumon
-Crime And Punishment
-Upon The Tainted Sorrow
-Light Snow
-Discourse On Decadence
-The Matchless Poet
- */
+/* Added after some of my Mutuals */
+.header > a[href="/user/fabseman/"].name:after {
+    content: "Draconia";
+}
 .header > a[href="/user/skkerekt/"].name:after {
     content: "Flawless";
 }
@@ -617,6 +606,15 @@ The Matchless Poet
 }
 .header > a[href="/user/SuryaAnime/"].name:after {
     content: "Demon Snow";
+}
+.header > a[href="/user/Valpurga/"].name:after {
+    content: "All Men Are Equal";
+}
+.header > a[href="/user/sandwitcher/"].name:after {
+    content: "I Am A Cat";
+}
+.header > a[href="/user/Ruanxs/"].name:after {
+    content: "Crime and Punishment";
 }
 
 
