@@ -566,7 +566,6 @@ body .content.container > .overview {
     content: "No Longer Human";
 }
 
-
 /* Added after some of my Mutuals */
 .header > a[href="/user/fabseman/"].name:after {
     content: "Draconia";
@@ -615,6 +614,9 @@ body .content.container > .overview {
 }
 .header > a[href="/user/Ruanxs/"].name:after {
     content: "Crime and Punishment";
+}
+.header > a[href="/user/KawaiiStardust/"].name:after {
+    content: "Gravity Manipulation";
 }
 
 
