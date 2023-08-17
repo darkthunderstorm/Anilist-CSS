@@ -47,19 +47,19 @@ https://freefrontend.com/css-menu/ -->
     <div class="themes">
       <span>THEMES</span>
       <div class="theme">
-        <b>Storm</b>
+        <a href="#fulltheme" onclick="themeselect('Storm')">Storm</a>
         <img onclick="popup('Storm')" src="./Preview/Storm.png" alt="Storm" title="Click on Image to view Theme Screenshots">
       </div>
       <div class="theme">
-        <b>Blaze</b>
+        <a href="#fulltheme" onclick="themeselect('Blaze')">Blaze</a>
         <img onclick="popup('Blaze')" src="./Preview/Blaze.png" alt="Blaze" title="Click on Image to view Theme Screenshots">
       </div>
       <div class="theme">
-        <b>Oregairu</b>
+        <a href="#fulltheme" onclick="themeselect('Oregairu')">Oregairu</a>
         <img onclick="popup('Oregairu')" src="./Preview/Oregairu.png" alt="Oregairu" title="Click on Image to view Theme Screenshots">
       </div>
       <div class="theme">
-        <b>BSD</b>
+        <a href="#fulltheme" onclick="themeselect('BSD')">BSD</a>
         <img onclick="popup('BSD')" src="./Preview/BSD.png" alt="BSD" title="Click on Image to view Theme Screenshots">
       </div>
       <!-- <div class ="content">
@@ -121,7 +121,7 @@ https://freefrontend.com/css-menu/ -->
         <img src="" alt="" class="preview4">
       </div> -->
     </div>
-    <div class="fulltheme">
+    <div class="fulltheme" id="fulltheme">
       <div class="custom-shape-divider-top">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -134,7 +134,7 @@ https://freefrontend.com/css-menu/ -->
           <div class="imgbutton imgbutton2">></div>
         </div>
       </div>
-      <div class="fullthemeabtdiv">
+      <div class="fullthemeabtdiv" id="themeabt">
         <div class="fullthemeabttitle">Title</div>
         <div class="fullthemeabtcont">
         
@@ -142,6 +142,7 @@ https://freefrontend.com/css-menu/ -->
         <li class="point point_red">Hell</li>
       </div>
       </div>
+      <a href="./Files/BSD.css" id="downloadbtn" target="_blank">View CSS</a>
     </div>
     <div id="footer">
       <div id="upcoming">

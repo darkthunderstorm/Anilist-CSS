@@ -41,6 +41,16 @@ function popup(x) {
   document.querySelector('.preview3').src = "./Images/" + x + "-3.png";
   document.querySelector('.preview4').src = "./Images/" + x + "-4.png";
 }
+
+const themeimg = document.querySelector('#themeimg img')
+const themetitle = document.querySelector('#themeabt .fullthemeabttitle')
+const cssdwld = document.querySelector('#downloadbtn')
+
+function themeselect(name) {
+  themeimg.src = "./Images/" + name + "-1.png";
+  themetitle.innerHTML = name + " Theme";
+  cssdwld.href = "./Files/" + name + ".css";
+}
 function closepopup() {
   document.querySelector('#popup').classList.remove('active')
 }
