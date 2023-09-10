@@ -1,0 +1,1938 @@
+/*
+Attack On Titan Theme
+
+Made By - Thunderblaze (https://anilist.co/user/ThunderBlaze)
+
+This is gonna run long so skip if you don't wanna read
+
+I wanna say this is totally made by ME but I cant (T-T)
+I made this using other people ideas or taking inspiration from those ideas
+Though I can proudly say about 90% of the code is written myself hehe
+So here goes the list of people I took the ideas from as I am not much creative
+
+Anzu -> Basic CSS Framework and Custom Badges
+Hyperixn, Cakes, Sigma -> Basic CSS Framework
+Ziombal -> Floating Banner Idea
+Kyerstorm -> Vertical Navbar and Activity Grid Idea
+SaikoKurami -> Blurred Activity Background Idea
+Redii -> Impressive use of both Border and Outline Property, Moving Floating Banner Idea
+YeNight -> Idea of a half Gradient overlay over favourites and the big first favourite
+Ksyoz -> A few things bcoz I am lazy (like code to make everything round,etc)
+*/
+
+
+/* Import Nevis Font */
+@font-face {
+    font-family: Nevis;
+    src: url('https://files.catbox.moe/a3a624.ttf');
+}
+
+
+/*Animation of Welcome Page */
+@keyframes showprofile {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* Pop Out Animation in Activity Feed */
+@keyframes popout {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+
+@keyframes Banner
+{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Critical Variables */
+:root{
+    
+    --bgc1:                     #EADEDAFF;
+    --bgca1:                    #BCABA8FF;
+    --fgc1:                     #604544FF;
+    --color-blue-dim:           200, 34, 112;
+}
+
+
+.site-theme-dark, .site-theme-contrast {
+
+    --bgc1:                     #001021FF;
+    --bgca1:                    #034773FF;
+    --fgc1:                     #EBF4FFFF;
+    --color-blue-dim:           2, 175, 182;
+
+}
+
+
+/*Loading AOT Logo*/
+.about .markdown > center > div{
+    background: rgb(var(--color-blue-dim));
+    background-image: url(https://svgshare.com/i/vMv.svg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: 1000px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    animation: progressdiv 3s ease forwards 1s;
+}
+
+#app > .progress{
+    display: none;
+}
+
+
+/*Loading progress bar*/
+.about .markdown > center > div a[href="progress"] {
+    pointer-events: none;
+    top: calc(40% + 160px);
+    left: calc(50% - 200px);
+    position: fixed;
+    width: 0px;
+    background: white;
+    height: 10px;
+    border-radius: 50px;
+    animation: progressbar 3s ease forwards 1s;
+}
+
+
+/*Loading text*/
+.about .markdown > center > div a[href="progress"]:after {
+    content: 'Loading';
+    color: white;
+    position: absolute;
+    width: 60px;
+    left: 0;
+    top: -25px;
+    
+}
+
+
+/*Loading Amimations*/
+@keyframes progressbar {
+    0% {
+        width: 0;
+    }
+    90% {
+        opacity: 1;
+        width: 400px;
+    }
+    99% {
+        opacity: 0;
+        width: 400px;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        width: 400px;
+    }
+}
+
+@keyframes progressdiv {
+    90% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* Variables */
+:root, .site-theme-dark, .site-theme-contrast {
+    
+    --sc2     :  #00ABE7A0;
+    --cur     :  url('https://i.imgur.com/YIBtsMu.png');
+    --bnr-PFP :  url('https://i.imgur.com/pZFoWj6.png');
+    --gbr     :  8px;
+    --abr     :  15px;
+    --hbr     :  20px;
+    --blr     :  blur(8px);
+
+}
+
+
+/* Change Light Theme variables */
+:root{
+
+    --color-background:         234, 222, 218; 
+    --color-blue:               255, 91, 170;
+    --color-blue-2:             #c82270;
+    --color-text:               78, 58, 76;
+    --color-text-light:         176, 156, 174;
+    --color-overlay:            123, 0, 63;
+    --color-text-lighter:       96, 69, 68;
+    --color-gray-300:           255, 42, 56;
+    --color-navbar:             59, 42, 57;
+/*     --color-navbar:             255, 255, 255; */
+    --sc1:                      #AA336AFF;
+    --fgca1:                    #c82270;
+    --nav-link-hover:           98, 75, 95;
+    --nav-ic-f:                 invert(99%) sepia(96%) saturate(2%) hue-rotate(184deg) brightness(107%) contrast(100%);
+    --nav-ic-fh:                invert(48%) sepia(86%) saturate(1464%) hue-rotate(301deg) brightness(103%) contrast(102%);
+    --body-bg:                  url('https://i.imgur.com/kDxw8pj.jpg');
+    --actvy-txt-shdw:           none;
+    --bnr     :                 url('https://i.imgur.com/i6lA5fm.png');
+
+}
+
+.site-theme-dark, .site-theme-contrast {
+
+    --color-foreground:         0, 46, 61;
+    --color-background:         0, 16, 20;
+    --color-blue:               0,221,255;
+    --color-blue-2:             #0083A3; 
+    --color-red:                0,221,255;
+    --color-text:               217, 239, 243;
+    --color-overlay:            5, 152, 180;
+    --color-text-lighter:       180, 201, 255;
+    --color-text-light:         0, 130, 144;
+    --color-gray-300:           0, 60, 45;
+    --color-navbar:             0, 33, 41;
+    --sc1     :                 #00ABE7FF;
+    --fgca1:                    #99E4FFFF;
+    --nav-link-hover:           0, 65, 82;
+    --nav-ic-f:                 invert(99%) sepia(96%) saturate(2%) hue-rotate(184deg) brightness(107%) contrast(100%);
+    --nav-ic-fh:                invert(73%) sepia(72%) saturate(362%) hue-rotate(172deg) brightness(105%) contrast(101%);
+    --actvy-txt-shdw:           0px 0px 2px #0000;
+    --AOT-dropdown:             149,200,207;
+    --bnr     :                 url('https://i.imgur.com/aWdDwaf.png');
+
+}
+
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ============================================| BODY |============================================= */
+/*  ================================================================================================= */
+
+
+* {
+    cursor: var(--cur),auto !important;
+}
+
+
+/* Customise background */
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.05rem;
+    font-size: 1.6rem;
+}
+
+
+/* Add margin to move content from below navbar */
+body .page-content{
+    margin-left: 68px;    
+}
+
+
+body .page-content .markdown {
+    font-size: 1.5rem
+}
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ==========================================| NAVBAR |============================================= */
+/*  ================================================================================================= */
+
+
+/* Customise Navbar */
+body #nav {
+    border-radius: 0 var(--hbr) var(--hbr) 0;
+    height: 100%;
+    max-height: 800px;
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 68px; 
+    background: rgb(var(--color-navbar));
+    box-shadow:    rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                   rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                   rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                   rgba(0, 0, 0, 0.07) 8px 0px 16px;
+    transition: width 0.3s ease-in-out !important;
+}
+
+
+/* Make Navbar a Grid for better display */
+body #nav .wrap {
+    align-self: center;
+    display: grid;
+    grid-template-rows: 85px auto auto 100px;
+    margin: 0;
+    max-height: 750px;
+    overflow: hidden;
+    padding: 1;
+}
+
+
+/* Navbar Logo Image */
+body #nav .wrap .logo img {
+/*    content: var(--nav-lg);*/
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    position: relative;`
+}
+
+
+/* Add Anilist text after logo */
+body #nav .wrap .logo:after {
+    content: 'ANILIST';
+    position: absolute;
+    font-size: 3.0rem;
+    left: 85px;
+    font-family: "Nevis";
+    letter-spacing: 0.3Rem;
+    transition: all 0.3s ease-in;
+    visibility: hidden;
+    opacity: 0;
+    top: inherit;
+    color: #FFF;
+}
+
+
+/* Navbar Search */
+body #nav .wrap .search {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    padding: 12px 14px;
+    background: rgb(var(--nav-link-hover));
+    border-radius: 35px;
+    margin: 0 12px 0 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 45px;
+    transition: width 0.3s ease-in-out !important;
+}
+
+
+/* Change default search icon color */
+body #nav .wrap .search svg{
+    color: var(--fgca1);
+}
+
+
+/* Add search Anilist text in search box */
+body #nav .wrap .search:after {
+    content: "Search AniList";
+    margin-left: 16px;
+    color: #FFF;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Move the search Anilist text on hover */
+body #nav .wrap .search:hover:after {
+    margin-left: 12px; 
+}
+
+
+/* Navbar Links(Home,Profile,....) */
+body #nav .wrap .links {
+    display: grid;
+    grid-row-gap: max(2.6vh,32px);
+    grid-template-rows: min(34px,4vh) min(34px,4vh) min(34px,4vh) min(36px,4vh) min(34px,4vh) min(34px,4vh);
+    justify-content:left;
+    padding: 10px;
+}
+
+
+/* Make the Navbar Links display correctly */
+body #nav .wrap .links > a, body #nav .wrap .links span {
+    font-family: "Nevis",sans-serif;
+    font-size: 2.4rem;
+    border-radius: var(--gbr);
+    padding: 0px 20px 0px 8px;
+    width: 260px;
+    height: 48px;
+    display: inline-grid;
+    grid-template-columns: 44px auto;
+    align-items: center;
+    column-gap: 20px;
+    white-space: nowrap;
+    color: var(--fgca1);
+    color: #FFF;
+    transition: all 0.1s ease-in-out;
+}
+
+
+/* Change Navbar link colors on hover */
+body #nav .wrap .links > a:hover, body #nav .wrap .links span:hover {
+    background: rgb(var(--nav-link-hover));
+    color: rgb(var(--color-blue));
+}
+
+
+/* Change Browse link color on hover */
+body #nav .wrap .links span > a:hover {
+    color: rgb(var(--color-blue));
+}
+
+
+/* Make the browse link container display correctly */
+body #nav .wrap .links span {
+    display: inline-block;
+}
+
+
+/* Make the browse link display correctly */
+body #nav .wrap .links span > a {
+    padding: 0;
+    display: inline-grid;
+    grid-template-columns: 44px auto;
+    height: 48px;
+    align-items: center;
+    column-gap: 20px;
+}
+
+
+/* Add Navbar Icons */
+body #nav .wrap .links > a::before, body #nav .wrap .links > span > a::before {
+    content: '';
+    background-size: 32px;
+    width: 32px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: var(--nav-ic-f);
+}
+
+
+/* Icon Background Images */
+/* Home */
+body #nav .wrap .links > a:nth-child(1)::before{
+    background-image: url('https://i.imgur.com/wTvQHFy.png');
+}
+
+/* Profile */
+body #nav .wrap .links > a:nth-child(2)::before{
+    background-size: 26px;
+    background-image: url('https://i.imgur.com/v16GY66.png');
+}
+
+/* Anime list */
+body #nav .wrap .links > a:nth-child(3)::before{
+    background-image: url('https://i.imgur.com/NXOCS2d.png');
+}
+
+/* Manga list */
+body #nav .wrap .links > a:nth-child(4)::before{
+    background-image: url('https://i.imgur.com/8FDvVVC.png');
+}
+
+/* Browse */
+body #nav .wrap .links > span > a::before{
+    background-image: url('https://i.imgur.com/63znEdV.png');
+}
+
+/* Forum */
+body #nav .wrap .links > a:nth-child(6)::before{
+    background-image: url('https://i.imgur.com/yABQ1y8.png');
+}
+
+
+/* Change colors of icons through filter, Since I used png */
+body #nav .wrap .links > a:hover::before, body #nav .wrap .links > span:hover > a::before {
+    filter: var(--nav-ic-fh);
+}
+            
+
+/* Edit browse dropdown location */
+body #nav .wrap .links .browse-wrap .dropdown {
+    top: 50%;
+    margin-top: min(20px,1vh);
+    left:268px;
+    position: fixed;
+}
+
+
+/* Hide browse dropdown arrow */
+body #nav .wrap .links .browse-wrap .dropdown:before {
+    visibility: hidden;
+}
+
+
+/* Navbar User Photo and Dropdown Arrow */
+body #nav .wrap .user {
+    justify-self: left;
+    display: grid;
+    height: 100px;
+}
+
+
+/* Add a border around profile photo */
+body #nav .wrap .user .user-wrap .avatar {
+    outline: 3px var(--fgca1) solid;
+    border-radius: var(--abr);
+}
+
+
+/* Hide profile arrow */
+body #nav .wrap .user .user-wrap .chevron {
+    visibility: hidden;
+}
+
+
+/* Edit dropdown location */
+body #nav .wrap .user .user-wrap .dropdown {
+    left: 54px;
+    position: fixed;
+}
+
+@media (height <= 800px) {
+    body #nav .wrap .user .user-wrap .dropdown{
+        bottom: 5px;
+        top: auto;
+    }
+}
+
+
+@media (height > 800px) {
+    body #nav .wrap .user .user-wrap .dropdown{
+        top: 50%;
+        margin-top: 150px;
+    }
+ }
+
+
+/* Hide Profile dropdown arrow */
+body #nav .wrap .user .user-wrap .dropdown:before {
+    visibility: hidden;
+}
+
+/* Navbar Notification Dot */
+body #nav .wrap .user .notification-dot{
+    grid-row-start: 1;
+}
+
+    
+ /* Change navbar width on hover */
+body #nav:hover {
+    width: 280px;
+}
+
+
+/* Make anilist text appear on hover */
+body #nav:hover .wrap .logo:after {
+    visibility: visible;
+    opacity: 1;
+}
+/* Make the sEarch expand */
+body #nav:hover .wrap .search {
+    width: calc(100% - 24px);
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ==========================================| BANNER |============================================= */
+/*  ================================================================================================= */
+
+body .page-content .header-wrap {
+    border-radius: var(--hbr);
+    overflow: hidden;
+    margin: 2.5% 2.5% 0 2.5%;
+}
+
+/* Customise Banner Image and Size */
+body .page-content .header-wrap .banner {
+    background-image: var(--bnr) !important;
+    height: 430px;
+}
+
+
+/* Remove Banner Download Option */
+body .page-content .header-wrap .banner .hohDownload {
+    visibility: hidden;
+}
+
+
+body .page-content .header-wrap .banner .container > .banner-content {
+    padding-left: 115px;
+    padding-right: 100px;
+}
+
+
+body .page-content .header-wrap 
+{
+    animation: Banner 4s infinite ease-in-out;
+}
+
+
+/* Customize Banner Name container */
+body .page-content .header-wrap .banner .container > .banner-content > .name-wrapper {
+    display: none;
+}
+
+
+body .page-content .header-wrap .banner .container > .banner-content > .name-wrapper .name {
+    font-size: 6rem;
+    font-family: 'Overpass', sans-serif;
+}
+
+
+/* Customize Follows you Badge */
+body .page-content .header-wrap .banner .container > .banner-content .follower-badge {
+    position: relative; 
+    top: -80px;
+    font-size: 1.6rem;
+    border-radius: 255px;
+    padding: 3px 10px 1px 10px;
+    transition: 0.4s;
+    background: rgb(var(--color-blue-dim));
+    white-space: nowrap;
+}
+
+
+/* Customize Follow/following button, dropdown Arrow position */
+body .page-content .header-wrap .banner .container > .banner-content .actions {
+    left: 50%;
+    margin-bottom: 35px;
+    position: absolute;
+}
+
+/* Customize Follow Button */
+body .page-content .header-wrap .banner .container > .banner-content .actions .nav-btn {
+    width: 180px;
+    position: absolute;
+    font-size: 1.6rem;
+    border-radius: 255px;
+    background: rgb(var(--color-blue-dim),0.25);
+    padding: 10px 10px;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 0 0px 15px rgba(255, 255, 255, 0.4);
+    border: 1px solid #FFF7;
+    overflow: hidden;
+    backdrop-filter: var(--blr);
+}
+
+
+/* give follow button shiny effect */
+body .page-content .header-wrap .banner .container > .banner-content .actions .nav-btn::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left,rgba(255,255,255,0.15),transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+
+/* follow button hover */
+body .page-content .header-wrap .banner .container > .banner-content .actions .nav-btn:hover {
+    background: rgb(var(--color-blue-dim));
+}
+
+
+/* Remove shiny effect on hover */
+body .page-content .header-wrap .banner .container > .banner-content .actions .nav-btn:hover::after {
+    transform: skewX(45deg) translateX(200%);
+}
+                
+
+/* Before You Follow Message Heading */
+body .page-content .header-wrap .banner .container > .banner-content .actions::after { 
+    width: 400px; 
+    content: "HEYA !!";
+    background: var(--bgca1);
+    z-index: 4;
+    border-radius: var(--hbr) 0 0 0;
+    border-top: 1px solid var(--sc1);
+    border-left: 1px solid var(--sc1);
+    top: 40%;
+    right: 0;
+    transform: translateY(-50%); 
+    padding: 12px;
+    font-size: 2rem;
+    position: fixed;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* Before You Follow Message Content */
+body .page-content .header-wrap .banner .container > .banner-content .actions::before { 
+    width: 400px; 
+    content: "Be sure to leave me a Message before or after pressing that button :D";
+    background: var(--bgc1);
+    color: var(--fgc1);
+    z-index: 4;
+    border-radius: 0 0 0 var(--hbr);
+    border-bottom: 1px solid var(--sc2);
+    border-left: 1px solid var(--sc2);
+    padding: 21px;
+    top: 40%;
+    right: 0;
+    Margin-top: 26px;
+    position: fixed;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* Show Before You Follow Message Heading on hover */
+body .page-content .header-wrap .banner .container > .banner-content .actions:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Show Before You Follow Message Content on hover */
+body .page-content .header-wrap .banner .container > .banner-content .actions:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Customize Arrow after follow/following button */
+body .page-content .header-wrap .banner .container > .banner-content .actions .dropdown.el-dropdown, .dropdown.el-dropdown:hover {
+    background: transparent;
+    font-size: 1.7rem;
+    left: 190px;
+    top:11px;
+}
+
+
+/* Customize PFP */
+body .page-content .header-wrap .banner .container > .banner-content > .avatar {
+    background: var(--bnr-PFP) 50% bottom/100% no-repeat;
+    padding: 80px;
+    margin-left: 20px;
+    height: 0;
+    width: 0;
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ============================================| NAV |============================================== */
+/*  ================================================================================================= */
+
+
+/* Font size and padding of nav links */
+body .header-wrap .nav-wrap .nav.container a.link {
+    position: relative;
+    font-size: 1.6rem;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    z-index: 2;
+}
+
+
+/* Color of Nav(overview,stats,etc) links on hover*/
+body .header-wrap .nav-wrap .nav.container .link:hover {
+    color: white;
+}
+
+
+/* Color of Active link */
+body .header-wrap .nav-wrap .nav.container .router-link-active, body .header-wrap .nav-wrap .nav.container .router-link-active:hover {
+    font-weight: 700;
+    color: white;
+}
+
+
+/* Add a line below nav links */
+body .header-wrap .nav-wrap .nav.container > .link::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Color of nav link lines on hover */
+body .header-wrap .nav-wrap .nav.container > .link:hover::after {
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+    background: var(--sc1);
+}
+
+/* Color of the current(active) nav link line */
+body .header-wrap .nav-wrap .nav.container > .router-link-active::after, .nav > .router-link-active:hover::after {
+    bottom: 0;
+/*     color: white; */
+    z-index: -1;
+/*     width: 100%; */
+    height: 100%;
+    background: var(--sc1);
+}
+
+
+/* Hide Reviews and Submission from navbar(overview,stats,etc) */
+body .header-wrap .nav-wrap .nav.container .link:nth-child(7),
+body .header-wrap .nav-wrap .nav.container .link:nth-child(8) {
+    display: none;
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  =======================================| ALL CONTAINERS |======================================== */
+/*  ================================================================================================= */
+
+
+body .content.container {
+    width: 100%;
+}
+
+body .content.container > * {
+    padding: 15px;
+    padding-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: var(--hbr);
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ========================================| OVERVIEW |============================================= */
+/*  ================================================================================================= */
+
+
+/* Customise Container of (Bio,Activity,...) in a fixed width range */
+@media (min-width: 1040px) and (max-width: 1540px) {
+
+    /* Container Size */
+    body .container {
+        max-width: 1280px;
+        width: 85vw;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Add some distance in b/w Total Anime and Manga */
+    body .section > .stats-wrap {
+        grid-row-gap: 25px;
+    }
+
+    /* Size of (bio,history,fav) and (list stats,activity) grid */
+    body .user .overview {
+        grid-template-columns: calc(50% - 40px) calc(50%) !important;
+    }
+    
+
+    /* Faviourites grid */
+    body .container .overview .favourites > .favourites-wrap {
+        width: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 27px !important;
+        overflow: visible;
+    }
+}
+
+
+
+/* Customize Headings */
+.desktop > .section-header, .section-header, .list-wrap > .section-name {
+    font-family: 'Nevis', sans-serif;
+    font-size: 2rem;
+    color: var(--fgc1);
+}
+
+
+/* Make the height of About section to full */
+.overview .section .about .content-wrap {
+/*     height: 100%; */
+    max-height: 100%;
+    padding: 0px;
+    padding-bottom: 10px;
+    overflow-y: hidden !important;
+}
+
+
+/* To Make Name and Number of Anime,Manga Readable */
+.stats-wrap .stat .value {
+    font-size: 2.1rem;
+    color: rgb(var(--color-blue));
+     font-weight: 700;
+}
+
+
+/* To decrease font size and change color of Anime,Manga Stats Heading */
+.stats-wrap .stat .label {
+    font-size: 1.2rem;
+}
+
+
+/* To fix the height of Anime,Manga stats column */
+.overview .content-wrap.list-stats {
+    height: 94px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* To return it to normal height on hover */
+.overview .content-wrap.list-stats:hover {
+    height: 142px;
+}
+
+
+/* Hide Studios */
+.desktop:nth-of-type(8) {
+    display: none;
+}
+
+
+/* Add Border-Radius,Box-Shadow,etc to Almost Everything */
+.stats-wrap > .content-wrap, .about > .content-wrap, .desktop > .content-wrap, .activity-entry > .wrap, .favourites-wrap > .favourite, .user-page-unscoped .markdown-editor, .el-textarea__inner, .input {
+    border-radius: var(--gbr) !important;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px,
+                rgba(0, 0, 0, 0.07) 0px 8px 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+/*  -------------------------------------------| CUSTOM BADGES |-------------------------------------------- */
+
+
+/* For Custom Badges (By Anzu) */
+
+/* Added after Visitor's name */
+.header > .name:after {
+    content: "Scout";
+}
+
+
+/* Added after my name */
+.header > a[href="/user/ThunderBlaze/"].name:after {
+    content: "Commander";
+}
+
+
+/* Customise Appearance of the Badge */
+.header > .name:after {
+    background: var(--color-blue-2);
+    border-radius: 5px;
+    color: #FFF;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 10px;
+    padding: 4px 8px 2px 8px;
+    position: relative;
+    top: -3px;
+}
+
+
+
+
+
+/*  --------------------------------------------| ACTIVITY |---------------------------------------------- */
+
+
+/* To Customize The PFP of Activty maker */
+body .overview .activity-feed-wrap .activity-feed .activity-entry > .wrap > .text .avatar {
+    border-radius: var(--abr);
+    background-size: 120%;
+    outline: 3px solid rgb(var(--color-blue));
+}
+
+
+/* To place the name of Activty maker */
+body .overview .activity-feed-wrap .activity-feed .text .header > .name {
+    padding-top: 2px;
+    margin-top: -5px;
+    padding-left: 3px;
+    color: rgb(var(--color-blue));
+    font-size: 1.7rem;
+    text-transform: uppercase; 
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+body .overview .activity-feed-wrap .activity-feed .reply .header > .name{
+    text-transform: uppercase; 
+    font-weight: 700;
+}
+ 
+
+ /* To change position of the Donator Badge */
+body .overview .activity-feed-wrap .activity-feed .text > .header > .donator-badge {
+    top: -9px; 
+    left: 0px;
+    background: #FFF;
+    border-radius: 5px;
+    color: #0083A3;
+    font-family: "Overpass", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 4px 8px 2px 8px;
+    position: relative;
+}
+
+
+/* To Customize the Time(text) of Activty */
+body .overview .activity-feed-wrap .activity-feed .activity-message > .wrap > .time, body .overview .activity-feed-wrap .activity-feed .activity-text > .wrap > .time {
+    left: 76px;
+    top: 45px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    font-size: 1rem;
+}
+
+
+/* To Customize the Time(text) of Anime/manga activity */
+body .overview .activity-feed-wrap .activity-feed .activity-anime_list > .wrap > .time, body .overview .activity-feed-wrap .activity-feed .activity-manga_list > .wrap > .time {
+    top: 3px;
+    right: 8px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/* Customize Activity icons like Reply,Like */
+body .overview .activity-feed-wrap .activity-feed .wrap > .actions, body .overview .activity-feed-wrap .activity-feed .wrap > .actions .replies span{
+    font-size: 1.5rem;
+    right: 10px;
+    bottom: 5px;
+}
+
+
+/* Make the font weight normal for activites */
+body .overview .activity-feed-wrap .activity-feed .activity-anime_list .list.small, body .overview .activity-feed-wrap .activity-feed .activity-manga_list .list.small {
+    font-size: 1.5rem;
+}
+
+
+/* Bold anime name in activity */
+body .overview .activity-feed-wrap .activity-feed .activity-anime_list .list.small .title, body .overview .activity-feed-wrap .activity-feed .activity-manga_list .list.small .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(var(--color-blue)) !important;
+}
+
+
+/* Set Animation of Activity rows */
+body .overview .activity-feed-wrap .activity-feed .activity-entry, body .overview .activity-feed-wrap .activity-feed .activity-replies .reply {
+    animation: popout 300ms ease-in-out;
+    
+}
+
+
+/* Set margins for Activity input */
+body .overview .activity-feed-wrap .activity-edit .input {
+    margin-bottom: 25px;
+}
+
+
+/* Set margins for Activity rows */
+body .overview .activity-feed-wrap .activity-feed .activity-entry {
+    margin-bottom: 15px;
+}
+
+
+/* To Customize Load More Button */
+body .overview .activity-feed-wrap .scroller .load-more {
+    color: #3b2a39;
+    background: rgb(var(--color-foreground));
+    margin:auto;
+    max-width: 200px;
+    border-radius: 200px;
+    transition: 0.4s all ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+body .site-theme-dark .overview .activity-feed-wrap .scroller .load-more, body .site-theme-contrast .overview .activity-feed-wrap .scroller .load-more {
+    color: white;
+}
+
+
+/* Add Shining Effect */
+body .overview .activity-feed-wrap .scroller .load-more::after {
+    content: '';
+    background: linear-gradient(to left,#FFF1,transparent);
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    top: 0;
+    transform: skew(-45deg);
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* Add Glow on hover */
+body .overview .activity-feed-wrap .scroller .load-more:hover {
+    color: white;
+    background: rgb(var(--color-blue-dim));
+}
+
+
+
+
+
+/*  ================================================================================================= */
+/*  =========================================| SCROLLBAR |=========================================== */
+/*  ================================================================================================= */
+
+
+/* Custom Scrollbar Size */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+
+/* Custom Scrollbar Color */
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--color-blue));
+    border-radius: 5px;
+}
+
+
+.activity-feed .markdown::-webkit-scrollbar{
+    width: 3px;
+}
+
+
+
+
+
+/*  ================================================================================================= */
+/*  =================================| ANIME LIST AND MANGA LIST |=================================== */
+/*  ================================================================================================= */
+
+
+/* Add border radius to table */
+body .content.container .medialist.table .list-wrap .list-section{
+    border-radius: var(--gbr);
+}
+        
+        
+/* Increase gap in names */
+body .content.container .medialist.table .row {
+    padding: 4px 0px;
+}
+
+            
+/* Change position of icons of 3 List display options */
+body .content.container .medialist.table > .lists > .actions {
+    margin-top: 25px;
+}
+
+
+/* Colors and Font Size of Titles */
+body .content.container .medialist.table > .lists .list-head.row div{
+    color: rgb(var(--color-blue));
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+                
+/* Appearance Actvity Entry on hover */
+body .content.container .medialist.table > .lists .entry:hover { 
+    background: rgba(var(--color-blue-dim),0.8);
+}
+
+body .content.container .medialist.table > .lists .entry.row:hover .cover .edit{
+    display: inline-flex !important;
+}
+
+body .content.container .medialist.table .group-header {
+    font-weight: 700;
+}
+
+/* Sidebar Links */
+body .content.container .medialist.table .filters .filter-group > span{
+    transition: all 0.2s ease-in-out;
+}
+
+body .site-theme-dark .content.container .medialist.table .filters .filter-group > span, body .site-theme-contrast .content.container .medialist.table .filters .filter-group > span {
+    color: #FFF;
+}
+
+body .content.container .medialist.table .filters .filter-group > span .count {
+    margin-right: 10px;
+}
+
+/* Sidebar Links on Hover*/
+body .content.container .medialist.table .filters .filter-group > span:hover{
+    color: rgb(var(--color-blue-dim));
+}
+
+
+/* Active Sidebar Link */
+body .content.container .medialist.table .filters .filter-group > span.active{
+    color: rgb(var(--color-blue));
+    font-weight: 600;
+}
+
+body .content.container .medialist.cards .entry-card .title {
+    backdrop-filter: blur(4px);
+    transition: background 0.3s ease-in-out;
+}
+body .content.container .medialist.cards .entry-card:hover .title {
+    --color-overlay: 0, 49, 61;
+}
+body .content.container .medialist.cards .entry-card:hover .edit {
+    display: flex !important;
+}
+
+
+
+
+/*  ================================================================================================= */
+/*  ===========================================| EXTRAS |============================================ */
+/*  ================================================================================================= */
+
+
+/* Dark Dropdown Integration */
+.site-theme-dark, .site-theme-contrast {
+    --color-background-100: var(--color-foreground);
+    --color-background-200: var(--color-background);
+    --color-gray-100: 0, 69, 91;
+    --color-gray-600: var(--AOT-dropdown);
+    --color-gray-700: var(--AOT-dropdown);
+    --color-gray-800: var(--color-blue);
+    --color-gray-900: var(--color-blue);
+}
+
+
+/* Remove Extra Functions */
+.hohColourPicker, .theme-selector > .contrast, .hohDismiss,.footer .container .links a:before {
+    display: none;
+}
+
+
+/* Awesome Spoiler Tag */
+.markdown .markdown-spoiler:before {
+    background: rgb(var(--color-background));
+    content: "SPOILER";
+    font-size: 1.2rem;
+    padding: 4px 16px;
+    font-weight: 700;
+    font-family: "Poppins",sans-serif;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ============================================| STATS |============================================ */
+/*  ================================================================================================= */
+
+
+body .content.container .stats {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;;
+}
+
+/* Change Color of Sidebar Links */
+body .stats .filter-wrap .filter-group a {
+    color: var(--fgc1);
+        font-weight: 500;
+}
+
+
+/* Change Color of Sidebar Links on Hover */
+body .stats .filter-wrap .filter-group a:hover {
+    color: rgb(var(--color-blue-dim));
+}
+
+
+/* Change Color of Active Sidebar Link */
+body .stats .filter-wrap .filter-group a.router-link-active {
+    color: rgb(var(--color-blue));
+    font-weight: 700;
+}
+
+
+/* Change Color of Sidebar Headings */
+body .stats .filter-wrap .filter-group .group-header {
+    font-weight: 700;
+}
+
+
+/* To make the stats look better */
+body .stats .overview .highlights {
+    background: rgb(var(--color-foreground));
+    border-radius: var(--gbr);
+    padding: 30px;
+    width:100%;
+    margin-left: 0;
+}
+
+
+/* To change color of circle and svg inside it*/
+body .stats .overview .highlights .highlight .circle {
+    background: rgb(var(--color-background));
+}
+    
+body .stats .overview .highlights .highlight .circle svg{
+    color: rgb(var(--color-text-light));
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ==========================================| SOCIAL |============================================= */
+/*  ================================================================================================= */
+
+
+body .content.container .user-social {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+/* Change Color of sidebar links */
+body .user-social .filter-group span {
+    font-weight: 500;
+}
+
+body .site-theme-dark .filter-group span, body .site-theme-contrast .filter-group span {
+    color: white;
+}
+
+
+/* Change Color of sidebar links on hover */
+body .user-social .filter-group span:hover {
+    color: rgb(var(--color-blue-dim));
+}
+
+
+/* Change Color of Active sidebar link */
+body .user-social .filter-group span.active {
+/*     background: var(--bgc1); */
+    color: rgb(var(--color-blue));
+    font-weight: 600;
+}
+
+
+ body .user-social .filter-group .group-header {
+/*     color: var(--fgca1); */
+    font-weight: 700;
+}
+
+
+/* To Make the grid bigger an cleaner */
+body .user-social .wrap, body .user-social .hohSocialContent.user-follow {
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fill,87px) !important;
+    grid-template-rows: repeat(auto-fill,87px) !important;
+}
+
+
+/* Customize Following/er PFP Background */
+body .user-social .wrap .follow-card, body .user-social .hohSocialContent.user-follow .follow-card{
+    width: 87px;
+    height: 87px;
+    position: relative;
+    border-radius: 75px 10px;
+    background: rgb(var(--color-blue));
+    transition: all 0.3s ease-in-out;
+}
+body .user-social .wrap .follow-card:before, body .user-social .hohSocialContent.user-follow .follow-card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+/*     position: relative; */
+    width: 87px;
+    height: 87px;
+    border-radius: 10px 75px;
+    background: rgb(var(--color-blue));
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Increase Size on hover */
+body .user-social .wrap .follow-card:hover, body .user-social .hohSocialContent.user-follow .follow-card:hover {
+    transform: scale(1.1);
+}
+
+
+/* Customize Following/er PFP */
+body .user-social .wrap .follow-card .avatar, body .user-social .hohSocialContent.user-follow .follow-card .avatar {
+    width: 87px;
+    height: 87px;
+    transform: scale(0.95);
+    background-color: rgb(var(--color-foreground));
+/*     background-color: var(--bgc1); */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+body .user-social .follow-card .avatar .name{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, Futura, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ========================================| FAVOURITES |=========================================== */
+/*  ================================================================================================= */
+
+
+
+/* Favourites */
+.favourites > .favourites-wrap a{
+    position: relative;
+    border: 3px solid rgb(var(--color-background));
+    outline: 4px solid rgb(var(--color-foreground));
+    border-radius: 8px !important;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Add an dark Tint Overlay over Favourites */
+.favourites > .favourites-wrap a:after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(var(--color-foreground),0.5);
+    border-radius: 5px;
+    z-index: 4;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.favourites > .favourites-wrap a:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(var(--color-blue),0),rgba(var(--color-blue),0.1),rgba(var(--color-blue),0.3),rgba(var(--color-blue),0.5),rgba(var(--color-blue),0.7));
+    border-radius: 5px;
+    z-index: 3;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.favourites > .favourites-wrap a:hover:after{
+    background: none;
+}
+
+/* Big Image for Most favourite of each section */
+.favourites > .favourites-wrap a:nth-child(1) {
+    grid-column: span 5;
+    width: auto;
+    background-position: center bottom;
+    transform: scale(0.98);
+}
+
+/* Attack on Titan Big Image */
+.favourites > .favourites-wrap.anime a:nth-child(1) {
+    background-image: url("https://i.imgur.com/qiV38Mc.png") !important;
+}
+
+/* Three Days of Happiness Big Image */
+.favourites > .favourites-wrap.manga a:nth-child(1) {
+    background-image: url("https://i.imgur.com/0iGWWEL.png") !important;
+}
+
+/* Eren Yeager Big Image */
+.favourites > .favourites-wrap.characters a:nth-child(1) {
+    background-image: url("https://i.imgur.com/XP5szhC.png") !important;
+}
+
+/* Hiroyuki Sawano Big Image */
+.favourites > .favourites-wrap.staff a:nth-child(1) {
+    background-image: url("https://i.imgur.com/vSxPQmO.png") !important;
+}
+
+/* Favourites on hover */
+.favourites > .favourites-wrap > a:hover {
+    outline-color: rgb(var(--color-blue));
+    transform: none;
+}
+
+
+/* Edit Faviourites grid ob Favourites Page */
+body .content.container > .favourites .favourites .favourites-wrap{
+    margin: 30px;
+    margin-right: 30px;
+    border-radius: var(--abr);
+    grid-gap: 30px;
+}
+        
+        
+/* Make grid gap a little less for studios grid */
+body .content.container > .favourites .favourites .favourites-wrap.studios {
+    display: flex;
+}
+        
+        
+/* Add padding to make studios look better */
+body .content.container > .favourites .favourites .favourites-wrap.studios a {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+body .content.container > .favourites .favourites .favourites-wrap a {
+    transform: none;
+    outline-color: rgb(var(--color-background));
+    border-color: rgb(var(--color-foreground));
+}
+
+
+body .content.container > .favourites .favourites .favourites-wrap a:hover {
+    outline-color: rgb(var(--color-blue));
+}
+
+
+body .content.container > .favourites .favourites .favourites-wrap a:after {
+    display: none;
+}
+
+
+
+
+
+
+/*  ================================================================================================= */
+/*  ===========================================| FOOTER |============================================ */
+/*  ================================================================================================= */
+
+
+/* Customise Footer */
+body .wrap > .footer {
+    background: rgb(var(--color-navbar));
+    border-radius: var(--hbr) var(--hbr) 0px 0px;
+    width: auto;
+    margin-left: calc(2.5% + 68px);
+    margin-right: 2.5%;
+}
+    
+
+/* Customise Footer elements container*/
+body .wrap > .footer > .container {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+/* Footer Links */
+body .wrap > .footer > .container > .links{
+    margin-left: 100px;
+}
+            
+body .wrap > .footer > .container > .links a{
+    color: rgb(var(--color-text-light));
+    text-transform: uppercase; 
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+ /* Footer Links on hover */
+ body .wrap > .footer > .container > .links a:hover{
+    color: rgb(var(--color-blue));
+}
+
+
+body .wrap > .footer > .container .theme-selector{
+    padding-top: 50px;
+}
+
+
+/* Change color of "Site Theme" text */
+body .wrap > .footer > .container .theme-selector > h2 {
+    color: rgb(var(--color-blue));
+    text-transform: uppercase; 
+}
+
+
+
+/*  ----------------------------------------| SUPER EXTRA |-------------------------------------------- */
+
+
+/* Image of anime/manga in activity entry */
+.activity-feed > div > div.wrap > div.list.small > a {
+    border-radius: 5px;
+/*     border: 3px solid rgb(var(--color-background)); */
+    margin: 3px;
+}
+
+
+/* Add blurred image of anime/manga behind its activity entry */
+.activity-feed > div > div.wrap > div.list.small > a::before {
+    content: "";
+    background: inherit;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    position: absolute;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+
+
+/* Add a half transparent/tranclucent gradient so the blurred image is visible */
+.activity-feed .wrap {
+    background: linear-gradient(90deg, rgba(var(--color-foreground),1) 0%, rgba(var(--color-foreground),0.67) 11%, rgba(var(--color-foreground),0.9) 100%);
+    text-shadow: var(--actvy-txt-shdw);
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid rgb(var(--color-background));
+}
+
+
+/* Add backround to activity text and message, which was distrupted by previous code */
+.activity-feed .activity-entry.activity-text .wrap, .activity-feed .activity-entry.activity-message .wrap {
+    background: rgb(var(--color-foreground));
+}
+
+
+/* Footer Links */
+.activity-entry .wrap:hover{
+    outline-color: rgb(var(--color-overlay));
+}
+
+
+/* Activity items */
+.activity-feed .activity-entry {
+    transition: all 0.3s ease-in-out;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: scale(0.98);
+}
+
+
+
+.activity-feed .activity-entry.activity-anime_list, .activity-feed .activity-entry.activity-manga_list {
+    transform: scale(0.98);
+}
+
+
+/* Add growing effect to activity items */    
+.activity-feed .activity-entry:hover {
+    transform: none;
+}
+
+
+/* Special things for screens with width in below range */
+@media (min-width:1280px) and (max-width: 1540px){
+    
+    .activity-feed .activity-entry.activity-anime_list, .activity-feed .activity-entry.activity-manga_list {
+        transform: scale(0.93);
+    }
+    .activity-feed .activity-entry.activity-anime_list:hover, .activity-feed .activity-entry.activity-manga_list:hover {
+        transform: none;
+    }
+
+    /* Add blurred image of anime/manga behind its activity entry */
+    .activity-feed > div > div.wrap > div.list.small > a::before {
+        width: 102%;
+        height: 102%;
+        left: -2px;
+        top: -2px;
+    }
+
+
+    /* Activity Background */
+    .activity-feed .wrap {
+        background: rgba(var(--color-foreground),0.75);
+        text-shadow: var(--actvy-txt-shdw);
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    /* Edit the user part of Like wrap size */
+    body .user .activity-feed .like-wrap .users{
+        width: 175px !important;
+    }
+
+
+    /* Edit the user PFPs in the Likw wrap */
+    body .user .activity-feed .like-wrap .users a{
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* Make the Activity feed a grid */
+    body .user .activity-feed {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        column-gap: 15px;
+        font-size: 1.6rem;
+        grid-template-rows: auto;
+    }
+
+
+    /* Make messages bigger */
+    body .user .activity-feed .activity-text, body .user .activity-feed .activity-message {
+        grid-column: span 3;
+    }
+
+
+    /* Set fixed height for anime/manga entries */
+    body .user .activity-feed .activity-anime_list .wrap, body .user .activity-feed .activity-manga_list .wrap{
+        height: 266px;
+    }
+
+
+    /* Make the activity entry items display as grid */
+    body .user .activity-feed .wrap .list.small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Edit Cover/Image of Anime/manga */
+    body .user .activity-feed .wrap .list.small .cover{
+        width: 95px;
+        height: 133px;
+        border-radius: var(--gbr);
+        margin-top: 27px;
+    }
+
+
+    /* Edit Cover/Image of Anime/manga on hover */
+    body .user .activity-feed .wrap:hover{
+        background: rgb(var(--color-foreground));
+    }
+
+
+    /* Make the text hidden after 3 lines */
+    body .user .activity-feed .wrap .list.small .details .status{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+    /* Customize position of dext below cover */
+    body .user .activity-feed .wrap .list.small .details{
+        position: relative;
+        top: 3px;
+        text-align: center;
+        justify-content: center;
+        padding: 0px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    /* Activity feed -> anime/manga entry dropdown background */
+    .activity-feed .wrap .list.small .entry-dropdown {
+        position: absolute;
+        top: -85px;
+        width: 24px;
+        height: 32px;
+        border-radius: 0 30px 30px 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    
+    /* Increase dropdown arrow size */
+    .activity-feed .wrap .list.small .entry-dropdown svg {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* Activity feed on screen having width greater than 1540px */
+@media (min-width: 1540px){
+
+    /* Font Size Activity Feed */
+    .wrap .list.small {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* Taken from Ksyoz's CSS */
+.favourites[data-v-3f86aedd],.review-card[data-v-0369a0cf], .follow-card,
+.bar-chart-wrap[data-v-46edc0ca], .pie-chart.vertical-layout[data-v-26dc9635], 
+.draggable[data-v-202815eb],.favourites-wrap[data-v-3f86aedd], .list-section, .filters,
+.el-input__inner, .random-btn[data-v-063397cc], .hohButton, .filter-group:first-child > span, .el-input,
+.content-wrap, .wrap[data-v-1bf2cf4e], .input[data-v-c574a71c]  a.router-link-active, .hohActive, .thread-card[data-v-70ae1ba4],
+.hohSocialContent, .hohThemeSwitch, .filter-group a[data-v-1e00b9da], .button[data-v-c574a71c], .primary-links[data-v-04b245e6], 
+.reply[data-v-732ef224], .markdown-editor, .theme-switch, .image, img, .youtube, blockquote, .embed[data-v-13cdaed6], .wrap{
+    border-radius: var(--gbr);
+}
+
+
+.markdown-spoiler:before, .el-dropdown-menu__item, .search[data-v-62eacfff] svg, .user[data-v-62eacfff], .actions .action[data-v-04d66030], .time .action[data-v-04d66030], .el-dropdown[data-v-eb51fd0e], .favourite[data-v-0317d914], .overview .favourite.studio, .button[data-v-5fb0ec91], .theme-preview[data-v-0f519cab], .theme-preview.dark-contrast, .load-more[data-v-6f203cf2], .actions .action[data-v-732ef224], .actions .time .action[data-v-732ef224] {
+    /*This fixes the issue of spoiler tags reverting the cursor to the original.*/
+    cursor: var(--cur), pointer !important;
+}
+
+.theme-preview.system, .theme-preview.dark-contrast{
+    display: none
+}
+
+.theme-selector{
+    position: relative;
+}
+
+.theme-preview::after{
+    content: '';
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    left: 13px;
+    transform: translate(-50%,-50%);
+    background: var(--bgc1);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23D8FFCB" class="bi bi-moon-stars-fill" viewBox="0 0 16 16" id="IconChangeColor"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" id="mainIconPathAttribute"></path> <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" id="mainIconPathAttribute"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.theme-preview.default, .theme-preview.dark {
+    position: absolute;
+    margin: 0;
+    text-indent: 50px;
+    padding: 12px;
+    width: 60px;
+    height: 30px;
+    left: 18px;
+    border-radius: 255px;
+    background: var(--fgc1) !important;
+    border: 2px solid var(--fgc1);
+    overflow: hidden;
+}
+
+
+.site-theme-dark  .theme-preview.dark{
+    visibility: hidden;
+}
+
+
+.theme-preview.dark:after{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="%23604544" class="bi bi-sun-fill" viewBox="0 0 16 16"> <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>');
+    left: 43px;
+}
+
+
+
+.media-card[data-v-3429f686],
+.cover[data-v-3b24ed8f],
+.select[data-v-063abb0a],
+.dropdown[data-v-04b245e6],
+.dropdown[data-v-38edf8f8],
+.search-wrap[data-v-2a18451e],
+.open-btn[data-v-a762532e],
+.hover-data[data-v-3b24ed8f],
+.options[data-v-063abb0a],
+.dropdown[data-v-0bb70ffa]{
+    box-shadow: none
+}
+
+.el-tooltip__popper.is-dark{
+    display: none !important;
+}
+
+
+.history-day.lv-0{
+    background: rgb(var(--color-background)) !important;
+}
+
+
+.overview[data-v-5c30286e] .section-header[data-v-ddf96a3c]::after {
+    content: '/ Not in Order except first Few';
+    font-size: 1.6rem;
+    position: relative;
+    color: rgb(var(--color-blue-dim));
+    opacity: 0.7;
+    left: 10px;
+}
+
+.overview[data-v-5c30286e] .section-header[data-v-eb51fd0e]::before {
+    content: 'ThunderBlaze\'s ';
+    position: relative;
+    color: rgb(var(--color-blue));
+}
