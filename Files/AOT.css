@@ -905,8 +905,8 @@ body .content.container > * {
 .overview .section .about .content-wrap {
 /*     height: 100%; */
     max-height: 100%;
-    padding: 0px;
     padding-bottom: 10px;
+    padding-top: 0px;
     overflow-y: hidden !important;
 }
 
@@ -939,7 +939,7 @@ body .content.container > * {
 
 
 /* Hide Studios */
-.desktop:nth-of-type(8) {
+.desktop:nth-of-type(7) {
     display: none;
 }
 
@@ -1111,7 +1111,7 @@ body .overview .activity-feed-wrap .scroller .load-more {
     overflow: hidden;
 }
 
-body .site-theme-dark .overview .activity-feed-wrap .scroller .load-more, body .site-theme-contrast .overview .activity-feed-wrap .scroller .load-more {
+body.site-theme-dark .overview .activity-feed-wrap .scroller .load-more, body.site-theme-contrast .overview .activity-feed-wrap .scroller .load-more {
     color: white;
 }
 
@@ -1216,7 +1216,7 @@ body .content.container .medialist.table .filters .filter-group > span{
     transition: all 0.2s ease-in-out;
 }
 
-body .site-theme-dark .content.container .medialist.table .filters .filter-group > span, body .site-theme-contrast .content.container .medialist.table .filters .filter-group > span {
+body.site-theme-dark .content.container .medialist.table .filters .filter-group > span, body.site-theme-contrast .content.container .medialist.table .filters .filter-group > span {
     color: #FFF;
 }
 
@@ -1362,7 +1362,7 @@ body .user-social .filter-group span {
     font-weight: 500;
 }
 
-body .site-theme-dark .filter-group span, body .site-theme-contrast .filter-group span {
+body.site-theme-dark .filter-group span, body.site-theme-contrast .filter-group span {
     color: white;
 }
 
