@@ -322,7 +322,10 @@ body #nav .wrap .logo:after {
     content: 'ANILIST';
     position: absolute;
     font-size: 3.0rem;
-    left: 85px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 85px;
     font-family: "Nevis";
     letter-spacing: 0.3Rem;
     transition: all 0.3s ease-in;
@@ -887,10 +890,12 @@ body .content.container > * {
         width: auto;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 27px !important;
-        overflow: visible;
     }
 }
 
+body .container .overview .favourites > .favourites-wrap {
+        overflow: visible;
+}
 
 
 /* Customize Headings */
@@ -939,7 +944,7 @@ body .content.container > * {
 
 
 /* Hide Studios */
-.desktop:nth-of-type(7) {
+.desktop:nth-of-type(8) {
     display: none;
 }
 
@@ -1935,4 +1940,16 @@ body .wrap > .footer > .container .theme-selector > h2 {
     content: 'ThunderBlaze\'s ';
     position: relative;
     color: rgb(var(--color-blue));
+}
+
+.activity-entry.hohPinned.activity-text .markdown center div, .activity-entry.hohPinned.activity-text .markdown::-webkit-scrollbar{
+    display: none;
+}
+
+.activity-entry.hohPinned.activity-text .markdown{
+    max-height: none;
+}
+.activity-entry.hohPinned.activity-text .wrap{
+    outline: 5px solid rgb(var(--color-blue));
+    
 }
