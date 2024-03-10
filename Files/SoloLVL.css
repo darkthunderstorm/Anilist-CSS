@@ -1,4 +1,4 @@
-/* Import Nevis Font */
+F/* Import Nevis Font */
 @font-face {
     font-family: Nevis;
     src: url('https://files.catbox.moe/a3a624.ttf');
@@ -594,6 +594,9 @@ body .container .overview .favourites > .favourites-wrap {
     content: "S-Rank";
 }
 
+.header > a[href="/user/Ksyoz/"].name:after {
+    content: "SS-Rank";
+}
 
 /* Added after my name */
 .header > a[href="/user/ThunderBlaze/"].name:after {
