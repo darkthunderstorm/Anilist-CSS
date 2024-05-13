@@ -679,6 +679,7 @@ body .overview .activity-feed-wrap .activity-feed .activity-anime_list > .wrap >
 
 body .overview .activity-feed-wrap .activity-feed .activity-anime_list > .wrap > .actions, body .overview .activity-feed-wrap .activity-feed .activity-manga_list > .wrap > .actions {
     position: absolute;
+    height: 40px;
     top: 160px;
     right: 10px;
 }
