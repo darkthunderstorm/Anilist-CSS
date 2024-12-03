@@ -258,6 +258,7 @@ body .page-content .header-wrap .banner {
 /*     background-image: var(--bnr) !important; */
     height: 350px;
 /*     border: 7px solid #FFF; */
+    width: 100%;
     max-width: 1700px;
     align-self: center;
     justify-self: center;
